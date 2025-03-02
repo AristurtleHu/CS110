@@ -45,6 +45,7 @@ void queue_free(Queue *queue) {
 void another_queue_free(Queue **queue) {
   if (queue == NULL || *queue == NULL)
     return;
+
   free((*queue)->data);
   free(*queue);
   *queue = NULL;
