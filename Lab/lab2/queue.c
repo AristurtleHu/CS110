@@ -27,7 +27,7 @@ void push(Queue *queue, double element) {
 }
 
 double back(Queue *queue) {
-  if (queue || queue->size == 0)
+  if (queue)
     return;
 
   return queue->data[queue->size - 1];
