@@ -3,11 +3,10 @@
 
 #define QUEUE_INITIAL_CAPACITY 10
 
-typedef struct
-{
-    double *data;
-    int size;
-    int capacity;
+typedef struct {
+  double *data;
+  int size;
+  int capacity;
 } Queue;
 
 Queue *queue_create(void);

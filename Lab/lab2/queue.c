@@ -11,7 +11,7 @@ Queue *queue_create(void) {
 }
 
 void push(Queue *queue, double element) {
-  if (queue) {
+  if (!queue) {
     printf("invalid queue\n");
     return;
   }
@@ -29,7 +29,7 @@ void push(Queue *queue, double element) {
 }
 
 double back(Queue *queue) {
-  if (queue || queue->size == 0) {
+  if (!queue || queue->size == 0) {
     printf("no element in queue\n");
     return 0.0;
   }
@@ -38,7 +38,7 @@ double back(Queue *queue) {
 }
 
 void queue_free(Queue *queue) {
-  if (queue) {
+  if (!queue) {
     printf("invalid queue\n");
     return;
   }
@@ -49,7 +49,7 @@ void queue_free(Queue *queue) {
 
 // avoid dangling pointer
 void another_queue_free(Queue **queue) {
-  if (queue == NULL || *queue == NULL) {
+  if (!queue || !*queue) {
     printf("invalid queue\n");
     queue = NULL;
     return;
