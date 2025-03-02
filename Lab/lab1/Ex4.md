@@ -38,11 +38,15 @@ It's F
 
 1 0 0 1
 
+1 0 0 1
+
 1 1 1 1
 
 1 0 0 1
 
-It's H, which is 9 F 9
+1 0 0 1
+
+It's H, which is 9 9 F 9 9
 
 1 0 0 1
 
