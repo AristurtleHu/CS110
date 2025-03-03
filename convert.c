@@ -21,18 +21,47 @@ fp32 convert(ca25 ca25) {
   return fp32;
 }
 
+enum type { normal, subnormal, zero, nan, inf };
+
+const char *getTypeName(enum type type) {
+  switch (type) {
+  case normal:
+    return "normal";
+  case subnormal:
+    return "subnormal";
+  case zero:
+    return "zero";
+  case nan:
+    return "nan";
+  case inf:
+    return "inf";
+  }
+  return NULL;
+}
+
 int main(void) {
-  unsigned long long ca25_hex;
-  while (scanf("%llx", &ca25_hex) != EOF) {
-    printf("%lld", ca25_hex);
-    // ca25 ca25;
-    // ca25.sign = (ca25_hex >> 31) & 0x1;
-    // ca25.exponent = (ca25_hex >> 30) & 0x3;
-    // ca25.mantissa = ca25_hex & 0x3FFFFFFF;
+  unsigned long long input;
+  while (scanf("%llx", &input) != EOF) {
+    ca25 ca25;
+    ca25.sign = input >> 63;
+    ca25.exponent = input >> 31 & 0xFFFFFFFF;
+    ca25.mantissa = input & 0x7FFFFFFF;
 
-    // fp32 fp32 = convert(ca25);
+    int implicit = ca25.exponent == 0 ? 0 : 1;
 
-    // printf("%d %d %d\n", fp32.sign, fp32.exponent, fp32.mantissa);
+    enum type type = normal;
+    if (implicit == 0)
+      type = ca25.mantissa == 0 ? zero : subnormal;
+    else if (ca25.exponent == (int)0xFFFFFFFF)
+      type = ca25.mantissa == 0 ? inf : nan;
+
+    printf("ca25 S=%d E=%08x M=%d.%08x %s\n", ca25.sign, ca25.exponent,
+           implicit, ca25.mantissa << 1, getTypeName(type));
+
+    fp32 fp32 = convert(ca25);
+
+    printf("fp32 S=%d E=%02x M=%d.%06x %s\n", fp32.sign, fp32.exponent,
+           implicit, fp32.mantissa, getTypeName(type));
   }
 
   return 0;
