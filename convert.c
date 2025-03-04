@@ -33,6 +33,19 @@ const char *getTypeName(enum type type) {
   return NULL;
 }
 
+fp32 roundAwayFromZero(ca25 ca25, fp32 fp32) {
+  if (ca25.mantissa & 0xFF) // round away from zero
+    fp32.mantissa++;
+
+  if (fp32.mantissa > 0xFFFFFE) {
+    fp32.mantissa = 0;
+    fp32.exponent++;
+    if (fp32.exponent == 0xFF)
+      fp32.type = inf;
+  }
+  return fp32;
+}
+
 // convert ca25 to fp32
 fp32 convert(ca25 ca25) {
   fp32 fp32;
@@ -46,7 +59,8 @@ fp32 convert(ca25 ca25) {
     return fp32;
   }
 
-  if (ca25.type == inf || exp + 127 > 0xFF) { // Too large for fp32
+  if (ca25.type == inf || exp + 127 > 0xFF ||
+      exp + 149 < 0) { // too large for normal or too small for subnormal
     fp32.type = inf;
     fp32.exponent = 0xFF;
     fp32.mantissa = 0;
@@ -60,20 +74,20 @@ fp32 convert(ca25 ca25) {
   }
 
   if (ca25.type == normal) {
+    if (exp + 126 < 0) {
+      fp32.type = subnormal;
+      fp32.exponent = 0;
+      fp32.mantissa = 1 << 22; // add the implicit 1
+      fp32.mantissa |= ca25.mantissa >> -(exp + 127);
+      fp32 = roundAwayFromZero(ca25,
+                               fp32); // TODO: not roundAwayFromZero function?
+      return fp32;
+    }
+
     fp32.exponent = exp + 127;
     fp32.mantissa = ca25.mantissa >> 8;
-    bool roundChecker = ca25.mantissa & 0xFF;
-    if (fp32.sign == 0 && roundChecker) // round away from zero
-      fp32.mantissa++;
-    else if (fp32.sign == 1 && roundChecker)
-      fp32.mantissa--;
-
-    if (fp32.mantissa > 0xFFFFFE) {
-      fp32.mantissa = 0;
-      fp32.exponent++;
-      if (fp32.exponent == 0xFF)
-        fp32.type = inf;
-    }
+    fp32 = roundAwayFromZero(ca25, fp32);
+    return fp32;
   }
 
   if (ca25.type == subnormal) {
@@ -105,6 +119,9 @@ int main(void) {
 
     printf("fp32 S=%d E=%02x M=%d.%06x %s\n", fp32.sign, fp32.exponent,
            implicit, fp32.mantissa, getTypeName(fp32.type));
+
+    printf("%08x\n",
+           (fp32.sign << 31) | (fp32.exponent << 23) | (fp32.mantissa >> 1));
   }
 
   return 0;
