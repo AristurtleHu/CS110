@@ -33,11 +33,12 @@ const char *getTypeName(enum type type) {
   return NULL;
 }
 
-fp32 roundAwayFromZero(ca25 ca25, fp32 fp32) {
+fp32 roundAwayFromZero(ca25 ca25, fp32 fp32, unsigned int roundLen) {
   if (fp32.type == normal && (ca25.mantissa & 0xFF)) // round away from zero
     fp32.mantissa++;
 
-  if (fp32.type == subnormal && (ca25.mantissa & 0x1FF)) // round away from zero
+  if (fp32.type == subnormal &&
+      (ca25.mantissa & roundLen)) // round away from zero
     fp32.mantissa++;
 
   if ((fp32.mantissa << 1) > 0xFFFFFE) { // add the implicit 0 in LSB
@@ -97,16 +98,29 @@ fp32 convert(ca25 ca25) {
     else if (exp + 126 < 0) {
       fp32.type = subnormal;
       fp32.exponent = 0;
-      fp32.mantissa = 1 << 22; // add the implicit 1
-      fp32.mantissa |= ca25.mantissa >> 9;
-      fp32 = roundAwayFromZero(ca25, fp32);
+
+      int mantissaNumNeed = exp + 149;
+
+      fp32.mantissa = 1; // add the implicit 1
+      unsigned int roundLen = 0x7FFFFFFF;
+
+      for (int i = 0; i < mantissaNumNeed; i++) {
+        fp32.mantissa <<= 1;
+        if (ca25.mantissa & (1 << (30 - i)))
+          fp32.mantissa++;
+
+        roundLen >>= 1;
+      }
+
+      fp32 = roundAwayFromZero(ca25, fp32, roundLen);
+
       return fp32;
     }
 
     else {
       fp32.exponent = exp + 127;
       fp32.mantissa = ca25.mantissa >> 8;
-      fp32 = roundAwayFromZero(ca25, fp32);
+      fp32 = roundAwayFromZero(ca25, fp32, 0xFF);
       return fp32;
     }
   }
