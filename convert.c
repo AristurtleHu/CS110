@@ -1,18 +1,19 @@
+#include <stdbool.h>
 #include <stdio.h>
 
 enum type { normal, subnormal, zero, nan, inf };
 
 typedef struct {
-  int sign;     // 1 bit
-  int exponent; // 32 bits
-  int mantissa; // 31 bits
+  int sign;              // 1 bit
+  unsigned int exponent; // 32 bits >0
+  unsigned int mantissa; // 31 bits
   enum type type;
 } ca25;
 
 typedef struct {
-  int sign;     // 1 bit
-  int exponent; // 8 bits
-  int mantissa; // 23 bits
+  int sign;              // 1 bit
+  unsigned int exponent; // 8 bits 127-biased
+  unsigned int mantissa; // 23 bits
   enum type type;
 } fp32;
 
@@ -37,6 +38,7 @@ fp32 convert(ca25 ca25) {
   fp32 fp32;
   fp32.sign = ca25.sign;
   fp32.type = ca25.type;
+  int exp = ca25.exponent - 0x7FFFFFFF;
 
   if (ca25.type == nan) {
     fp32.exponent = 0xFF;
@@ -44,7 +46,7 @@ fp32 convert(ca25 ca25) {
     return fp32;
   }
 
-  if (ca25.type == inf || ca25.exponent > 127) { // Too large for fp32
+  if (ca25.type == inf || exp + 127 > 0xFF) { // Too large for fp32
     fp32.type = inf;
     fp32.exponent = 0xFF;
     fp32.mantissa = 0;
@@ -57,7 +59,25 @@ fp32 convert(ca25 ca25) {
     return fp32;
   }
 
-  // Convert normal/subnormal values
+  if (ca25.type == normal) {
+    fp32.exponent = exp + 127;
+    fp32.mantissa = ca25.mantissa >> 8;
+    bool roundChecker = ca25.mantissa & 0xFF;
+    if (fp32.sign == 0 && roundChecker) // round away from zero
+      fp32.mantissa++;
+    else if (fp32.sign == 1 && roundChecker)
+      fp32.mantissa--;
+
+    if (fp32.mantissa > 0xFFFFFE) {
+      fp32.mantissa = 0;
+      fp32.exponent++;
+      if (fp32.exponent == 0xFF)
+        fp32.type = inf;
+    }
+  }
+
+  if (ca25.type == subnormal) {
+  } // might with 2^(-xx)
 
   return fp32;
 }
@@ -75,7 +95,7 @@ int main(void) {
 
     if (implicit == 0)
       ca25.type = ca25.mantissa == 0 ? zero : subnormal;
-    else if (ca25.exponent == (int)0xFFFFFFFF)
+    else if (ca25.exponent == 0xFFFFFFFF)
       ca25.type = ca25.mantissa == 0 ? inf : nan;
 
     printf("ca25 S=%d E=%08x M=%d.%08x %s\n", ca25.sign, ca25.exponent,
@@ -84,8 +104,7 @@ int main(void) {
     fp32 fp32 = convert(ca25);
 
     printf("fp32 S=%d E=%02x M=%d.%06x %s\n", fp32.sign, fp32.exponent,
-           implicit, fp32.mantissa,
-           getTypeName(fp32.type)); // TODO: whether -127 is correct
+           implicit, fp32.mantissa, getTypeName(fp32.type));
   }
 
   return 0;
