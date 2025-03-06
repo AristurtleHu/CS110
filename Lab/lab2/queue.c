@@ -59,7 +59,7 @@ double back(Queue *queue) {
     exit(EXIT_FAILURE);
   }
 
-  if (queue->size == 0) {
+  if (queue->size <= 0) {
     printf("no element in queue\n");
     exit(EXIT_FAILURE);
   }
