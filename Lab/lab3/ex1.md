@@ -12,9 +12,16 @@
 
 ### Q3
 
-34
+`34`
 
+the 10th fib number (0-indexed)
 
 ### Q4
 
 `0x10000000`
+
+### Q5
+
+`144`
+
+before `fib:`, change t0 to 2, t1 to 3
