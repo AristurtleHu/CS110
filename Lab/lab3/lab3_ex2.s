@@ -28,10 +28,11 @@ loop:
 	slli t3, t0, 2
 	add t4, t1, t3
 	lw t5, 0(t4)
+	add t5, t5, t5 # t0 is always even, t5 *= 2
 	beq t5, x0, exit
 	add t6, t2, t3
 	sw t5, 0(t6)
-	addi t0, t0, 1
+	addi t0, t0, 2 # t0 += 2 each time
 	jal x0, loop
 exit:
 	jal ra, print_lists
