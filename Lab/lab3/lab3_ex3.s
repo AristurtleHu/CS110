@@ -11,6 +11,7 @@ main_loop:
 	slli t3, t0, 2
 	add t4, t2, t3
 	lw a0, 0(t4)
+	# a0 = 6 3 5 12
 
 	addi sp, sp, -20
 	sw t0, 0(sp)
@@ -42,3 +43,23 @@ main_exit:
 	ecall # Exit
 
 seriesOp: 
+	# goal: change a0
+	addi t0, a0, -1
+	addi t1, x0, 1 # record the loop time
+	seriesOp_loop:
+	beq t0, x0, seriesOp_exit
+	add t2, t0, x0
+	andi t3, t1, 1 
+	beq t3, x0, even_loop_time
+
+	neg t2, t2 #t2 *= -1
+
+	even_loop_time:
+	add a0, a0, t2
+
+	addi t1, t1, 1
+	addi t0, t0, -1
+	j seriesOp_loop
+
+	seriesOp_exit:
+	jr ra
