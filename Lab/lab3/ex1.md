@@ -6,9 +6,9 @@
 
 ### Q2
 
-1. `la`: auipc + addi
-2. `mv`: addi
-3. `j`: jal
+1. `la`: `auipc` + `addi`
+2. `mv t0, t1`: `addi x5(t0) x6(t1) 0`
+3. `j`: `jal x0`
 
 ### Q3
 
