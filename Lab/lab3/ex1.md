@@ -24,4 +24,4 @@ the 9th fib number
 
 233
 
-before `fib:`, change t0 to 2, t1 to 3
+before `fib:`, change t3 d
