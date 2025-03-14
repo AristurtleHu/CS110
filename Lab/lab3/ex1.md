@@ -14,7 +14,7 @@
 
 `34`
 
-the 10th fib number (0-indexed)
+the 9th fib number
 
 ### Q4
 
@@ -22,6 +22,6 @@ the 10th fib number (0-indexed)
 
 ### Q5
 
-`144`
+233
 
-before `fib:`, change t0 to 2, t1 to 3
+before `fib:`, change t3 d
