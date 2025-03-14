@@ -1,4 +1,4 @@
-.globl simple_fn naive_mod mul_arr
+.globl simple_fn naive_mod mul_arr 
 
 .data
 failure_message: .asciiz "Test failed for some reason.\n"
@@ -171,3 +171,4 @@ failure:
     li a0, 10 # Exit ecall
     ecall
     
+# end
