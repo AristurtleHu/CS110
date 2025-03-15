@@ -99,10 +99,12 @@ naive_mod_end:
 mul_arr:
     # BEGIN PROLOGUE
     #
-    # FIXME: What other registers need to be saved?
+    # DONE: What other registers need to be saved?
     #
-    addi sp, sp, -4
+    addi sp, sp, -12
     sw ra, 0(sp)
+    sw s0, 4(sp)
+    sw s1, 8(sp)
     # END PROLOGUE
     mv s0, a0 # Copy start of array to saved register
     mv s1, a1 # Copy length of array to saved register
@@ -113,7 +115,7 @@ inc_arr_loop:
     add a0, s0, t1 # Add offset to start of array
     # Prepare to call helper_fn
     #
-    # FIXME: Add code to preserve the value in t0 before we call helper_fn
+    # DONE: Add code to preserve the value in t0 before we call helper_fn
     # Hint: What does the "t" in "t0" stand for?
     # Also ask yourself this: why don't we need to preserve t1?
     #
@@ -124,7 +126,9 @@ inc_arr_loop:
 inc_arr_end:
     # BEGIN EPILOGUE
     lw ra, 0(sp)
-    addi sp, sp, 4
+    lw s0, 4(sp)
+    lw s1, 8(sp)
+    addi sp, sp, 12
     # END EPILOGUE
     ret
 
