@@ -68,11 +68,13 @@ simple_fn:
 #     return s0;
 # }
 #
-# FIXME: There's a calling convention error with this function!
+# DONE: There's a calling convention error with this function!
 # The big all-caps comments should give you a hint about what's
 # missing. Another hint: what does the "s" in "s0" stand for?
 naive_mod:
     # BEGIN PROLOGUE
+    addi sp, sp, -4
+    sw s0, 0(sp)
     # END PROLOGUE
     mv s0, a0
 naive_mod_loop:
@@ -82,6 +84,8 @@ naive_mod_loop:
 naive_mod_end:
     mv a0, s0
     # BEGIN EPILOGUE
+    lw s0, 0(sp)
+    addi sp, sp, 4
     # END EPILOGUE
     ret
 
