@@ -51,10 +51,9 @@ main:
 
 # Just a simple function. Returns 2025.
 #
-# FIXME Fix the reported error in this function (you can delete lines
+# DONE: Fix the reported error in this function (you can delete lines
 # when necessary, as long as the function still returns 2025 in a0).
 simple_fn:
-    addi a0, t0, 2025
     li a0, 2025
     ret
 
@@ -69,7 +68,7 @@ simple_fn:
 #     return s0;
 # }
 #
-# FIXME There's a calling convention error with this function!
+# FIXME: There's a calling convention error with this function!
 # The big all-caps comments should give you a hint about what's
 # missing. Another hint: what does the "s" in "s0" stand for?
 naive_mod:
@@ -96,7 +95,7 @@ naive_mod_end:
 mul_arr:
     # BEGIN PROLOGUE
     #
-    # FIXME What other registers need to be saved?
+    # FIXME: What other registers need to be saved?
     #
     addi sp, sp, -4
     sw ra, 0(sp)
@@ -110,7 +109,7 @@ inc_arr_loop:
     add a0, s0, t1 # Add offset to start of array
     # Prepare to call helper_fn
     #
-    # FIXME Add code to preserve the value in t0 before we call helper_fn
+    # FIXME: Add code to preserve the value in t0 before we call helper_fn
     # Hint: What does the "t" in "t0" stand for?
     # Also ask yourself this: why don't we need to preserve t1?
     #
@@ -129,7 +128,7 @@ inc_arr_end:
 # It doesn't return anything.
 # C pseudocode for what it does: "*a0 = *a0 * *a0"
 #
-# FIXME This function also violates calling convention, but it might not
+# FIXME: This function also violates calling convention, but it might not
 # be reported by the Venus calling convention checker (try and figure out why).
 # You should fix the bug anyway by filling in the prologue and epilogue
 # as appropriate.
