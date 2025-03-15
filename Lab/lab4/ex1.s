@@ -132,7 +132,7 @@ inc_arr_end:
 # It doesn't return anything.
 # C pseudocode for what it does: "*a0 = *a0 * *a0"
 #
-# FIXME: This function also violates calling convention, but it might not
+# DONE: This function also violates calling convention, but it might not
 # be reported by the Venus calling convention checker (try and figure out why).
 # You should fix the bug anyway by filling in the prologue and epilogue
 # as appropriate.
