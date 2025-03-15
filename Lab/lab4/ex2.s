@@ -46,9 +46,25 @@ main:
     ecall
 
 
-# FIXME - # YOUR CODE HERE #
+# # YOUR CODE HERE #
 # Hint - Venus supports RV64M. You can use ``rem''.
 greatest_common_divider:
+# a0 = 12, a1 = 3, return in a0
+    beq a1, x0, gcd_end
+    addi sp, sp, -4
+    sw ra, 0(sp)
+
+    rem t0, a0, a1
+    mv a0, a1
+    mv a1, t0
+    jal greatest_common_divider
+
+    lw ra, 0(sp)
+    addi sp, sp, 4
 	ret
+    gcd_end:
+     ret
+
+
 
 # end
