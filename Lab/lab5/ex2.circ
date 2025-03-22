@@ -10,7 +10,6 @@
     </tool>
     <tool name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="facing" val="north"/>
     </tool>
     <tool name="Probe">
       <a name="appearance" val="classic"/>
@@ -78,25 +77,7 @@ end type_architecture;
 </a>
     </tool>
   </lib>
-  <lib desc="#TCL" name="7">
-    <tool name="TclGeneric">
-      <a name="content">library ieee;
-use ieee.std_logic_1164.all;
-
-entity TCL_Generic is
-  port(
-    --Insert input ports below
-    horloge_i  : in  std_logic;                    -- input bit example
-    val_i      : in  std_logic_vector(3 downto 0); -- input vector example
-
-	  --Insert output ports below
-    max_o      : out std_logic;                    -- output bit example
-    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example
-  );
-end TCL_Generic;
-</a>
-    </tool>
-  </lib>
+  <lib desc="#TCL" name="7"/>
   <lib desc="#Base" name="8">
     <tool name="Text Tool">
       <a name="font" val="SansSerif plain 12"/>
@@ -133,7 +114,23 @@ end TCL_Generic;
   <circuit name="AddMachine">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="AddMachine"/>
-    <a name="simulationFrequency" val="1.0"/>
+    <a name="simulationFrequency" val="4.0"/>
+    <comp lib="0" loc="(220,160)" name="Constant">
+      <a name="value" val="0xff"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(220,300)" name="Constant">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(350,350)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(380,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="halt"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="0" loc="(500,240)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
@@ -148,10 +145,31 @@ end TCL_Generic;
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="8" loc="(405,165)" name="Text">
+    <comp lib="3" loc="(300,170)" name="Comparator"/>
+    <comp lib="3" loc="(300,290)" name="Adder"/>
+    <comp lib="4" loc="(370,260)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="8" loc="(421,99)" name="Text">
       <a name="text" val="PUT CIRCUITRY HERE"/>
     </comp>
-    <wire from="(490,240)" to="(500,240)"/>
-    <wire from="(490,290)" to="(500,290)"/>
+    <wire from="(220,160)" to="(260,160)"/>
+    <wire from="(220,300)" to="(260,300)"/>
+    <wire from="(250,180)" to="(250,230)"/>
+    <wire from="(250,180)" to="(260,180)"/>
+    <wire from="(250,230)" to="(250,280)"/>
+    <wire from="(250,230)" to="(440,230)"/>
+    <wire from="(250,280)" to="(260,280)"/>
+    <wire from="(300,170)" to="(380,170)"/>
+    <wire from="(300,290)" to="(330,290)"/>
+    <wire from="(330,240)" to="(330,290)"/>
+    <wire from="(330,240)" to="(500,240)"/>
+    <wire from="(330,290)" to="(370,290)"/>
+    <wire from="(350,330)" to="(350,350)"/>
+    <wire from="(350,330)" to="(370,330)"/>
+    <wire from="(370,290)" to="(380,290)"/>
+    <wire from="(430,290)" to="(440,290)"/>
+    <wire from="(440,230)" to="(440,290)"/>
+    <wire from="(440,290)" to="(500,290)"/>
   </circuit>
 </project>

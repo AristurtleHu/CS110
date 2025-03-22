@@ -179,6 +179,9 @@ end type_architecture;
     <comp lib="0" loc="(410,180)" name="Tunnel">
       <a name="label" val="RST"/>
     </comp>
+    <comp lib="0" loc="(440,440)" name="Constant">
+      <a name="width" val="3"/>
+    </comp>
     <comp lib="0" loc="(480,720)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="OUT_LED4"/>
@@ -230,6 +233,15 @@ end type_architecture;
       <a name="facing" val="east"/>
       <a name="label" val="OUT_LED4"/>
     </comp>
+    <comp lib="2" loc="(260,420)" name="Multiplexer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="3" loc="(510,430)" name="Shifter">
+      <a name="shift" val="rr"/>
+    </comp>
+    <comp lib="4" loc="(340,390)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <comp lib="5" loc="(150,780)" name="LED">
       <a name="facing" val="north"/>
     </comp>
@@ -257,7 +269,7 @@ end type_architecture;
     <comp lib="8" loc="(675,210)" name="Text">
       <a name="text" val="PUT CIRCUITS HERE"/>
     </comp>
-    <wire from="(100,550)" to="(210,550)"/>
+    <wire from="(100,550)" to="(340,550)"/>
     <wire from="(1010,300)" to="(1010,320)"/>
     <wire from="(1020,300)" to="(1020,360)"/>
     <wire from="(1030,300)" to="(1030,400)"/>
@@ -271,17 +283,27 @@ end type_architecture;
     <wire from="(1070,360)" to="(1130,360)"/>
     <wire from="(1080,300)" to="(1080,320)"/>
     <wire from="(1080,320)" to="(1130,320)"/>
-    <wire from="(120,360)" to="(200,360)"/>
-    <wire from="(120,460)" to="(210,460)"/>
+    <wire from="(120,360)" to="(120,430)"/>
+    <wire from="(120,430)" to="(230,430)"/>
+    <wire from="(120,460)" to="(240,460)"/>
     <wire from="(150,720)" to="(150,780)"/>
     <wire from="(220,140)" to="(410,140)"/>
     <wire from="(220,180)" to="(410,180)"/>
+    <wire from="(220,360)" to="(220,410)"/>
+    <wire from="(220,360)" to="(630,360)"/>
+    <wire from="(220,410)" to="(230,410)"/>
+    <wire from="(240,440)" to="(240,460)"/>
+    <wire from="(260,420)" to="(340,420)"/>
     <wire from="(260,720)" to="(260,780)"/>
+    <wire from="(340,460)" to="(340,550)"/>
     <wire from="(370,720)" to="(370,780)"/>
+    <wire from="(400,420)" to="(470,420)"/>
+    <wire from="(440,440)" to="(470,440)"/>
     <wire from="(480,720)" to="(480,780)"/>
-    <wire from="(530,360)" to="(630,360)"/>
+    <wire from="(510,430)" to="(630,430)"/>
     <wire from="(590,720)" to="(590,780)"/>
-    <wire from="(630,360)" to="(630,450)"/>
+    <wire from="(630,360)" to="(630,430)"/>
+    <wire from="(630,430)" to="(630,450)"/>
     <wire from="(700,720)" to="(700,780)"/>
     <wire from="(810,720)" to="(810,780)"/>
     <wire from="(920,720)" to="(920,780)"/>

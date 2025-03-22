@@ -78,25 +78,7 @@ end type_architecture;
 </a>
     </tool>
   </lib>
-  <lib desc="#TCL" name="7">
-    <tool name="TclGeneric">
-      <a name="content">library ieee;
-use ieee.std_logic_1164.all;
-
-entity TCL_Generic is
-  port(
-    --Insert input ports below
-    horloge_i  : in  std_logic;                    -- input bit example
-    val_i      : in  std_logic_vector(3 downto 0); -- input vector example
-
-	  --Insert output ports below
-    max_o      : out std_logic;                    -- output bit example
-    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example
-  );
-end TCL_Generic;
-</a>
-    </tool>
-  </lib>
+  <lib desc="#TCL" name="7"/>
   <lib desc="#Base" name="8">
     <tool name="Text Tool">
       <a name="font" val="SansSerif plain 12"/>
@@ -149,23 +131,97 @@ end TCL_Generic;
       <a name="label" val="A"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="0" loc="(870,220)" name="Pin">
+    <comp lib="0" loc="(380,710)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="Out1"/>
       <a name="output" val="true"/>
       <a name="width" val="16"/>
     </comp>
+    <comp lib="2" loc="(310,390)" name="Multiplexer">
+      <a name="facing" val="south"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(310,480)" name="Multiplexer">
+      <a name="facing" val="south"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(310,570)" name="Multiplexer">
+      <a name="facing" val="south"/>
+      <a name="width" val="16"/>
+    </comp>
+    <comp lib="2" loc="(310,660)" name="Multiplexer">
+      <a name="facing" val="south"/>
+      <a name="width" val="16"/>
+    </comp>
     <comp lib="8" loc="(510,115)" name="Text">
       <a name="text" val="PUT CIRCUITRY HERE"/>
     </comp>
+    <comp loc="(450,320)" name="rot1"/>
+    <comp loc="(450,420)" name="rot2"/>
+    <comp loc="(450,510)" name="rot4"/>
+    <comp loc="(450,600)" name="rot8"/>
     <wire from="(200,380)" to="(220,380)"/>
-    <wire from="(230,220)" to="(270,220)"/>
-    <wire from="(840,220)" to="(870,220)"/>
+    <wire from="(230,220)" to="(320,220)"/>
+    <wire from="(240,360)" to="(280,360)"/>
+    <wire from="(240,370)" to="(270,370)"/>
+    <wire from="(240,380)" to="(260,380)"/>
+    <wire from="(240,390)" to="(250,390)"/>
+    <wire from="(250,390)" to="(250,640)"/>
+    <wire from="(250,640)" to="(250,680)"/>
+    <wire from="(250,640)" to="(290,640)"/>
+    <wire from="(260,380)" to="(260,550)"/>
+    <wire from="(260,550)" to="(260,680)"/>
+    <wire from="(260,550)" to="(290,550)"/>
+    <wire from="(270,370)" to="(270,460)"/>
+    <wire from="(270,460)" to="(270,680)"/>
+    <wire from="(270,460)" to="(290,460)"/>
+    <wire from="(280,360)" to="(280,370)"/>
+    <wire from="(280,370)" to="(280,680)"/>
+    <wire from="(280,370)" to="(290,370)"/>
+    <wire from="(300,320)" to="(300,360)"/>
+    <wire from="(300,320)" to="(320,320)"/>
+    <wire from="(300,420)" to="(300,450)"/>
+    <wire from="(300,420)" to="(310,420)"/>
+    <wire from="(300,510)" to="(300,540)"/>
+    <wire from="(300,510)" to="(310,510)"/>
+    <wire from="(300,600)" to="(300,630)"/>
+    <wire from="(300,600)" to="(310,600)"/>
+    <wire from="(310,390)" to="(310,420)"/>
+    <wire from="(310,420)" to="(390,420)"/>
+    <wire from="(310,480)" to="(310,510)"/>
+    <wire from="(310,510)" to="(390,510)"/>
+    <wire from="(310,570)" to="(310,600)"/>
+    <wire from="(310,600)" to="(390,600)"/>
+    <wire from="(310,660)" to="(310,710)"/>
+    <wire from="(310,710)" to="(380,710)"/>
+    <wire from="(320,220)" to="(320,320)"/>
+    <wire from="(320,320)" to="(390,320)"/>
+    <wire from="(320,350)" to="(320,360)"/>
+    <wire from="(320,350)" to="(380,350)"/>
+    <wire from="(320,440)" to="(320,450)"/>
+    <wire from="(320,440)" to="(380,440)"/>
+    <wire from="(320,530)" to="(320,540)"/>
+    <wire from="(320,530)" to="(380,530)"/>
+    <wire from="(320,620)" to="(320,630)"/>
+    <wire from="(320,620)" to="(380,620)"/>
+    <wire from="(380,350)" to="(380,370)"/>
+    <wire from="(380,370)" to="(450,370)"/>
+    <wire from="(380,440)" to="(380,470)"/>
+    <wire from="(380,470)" to="(450,470)"/>
+    <wire from="(380,530)" to="(380,560)"/>
+    <wire from="(380,560)" to="(450,560)"/>
+    <wire from="(380,620)" to="(380,650)"/>
+    <wire from="(380,650)" to="(450,650)"/>
+    <wire from="(450,320)" to="(450,370)"/>
+    <wire from="(450,420)" to="(450,470)"/>
+    <wire from="(450,510)" to="(450,560)"/>
+    <wire from="(450,600)" to="(450,650)"/>
   </circuit>
   <circuit name="rot8">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="rot8"/>
+    <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(230,230)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="width" val="16"/>
@@ -179,12 +235,16 @@ end TCL_Generic;
     <comp lib="8" loc="(435,125)" name="Text">
       <a name="text" val="PUT CIRCUITRY HERE"/>
     </comp>
-    <wire from="(230,230)" to="(300,230)"/>
-    <wire from="(510,230)" to="(590,230)"/>
+    <comp loc="(380,230)" name="rot4"/>
+    <comp loc="(480,230)" name="rot4"/>
+    <wire from="(230,230)" to="(320,230)"/>
+    <wire from="(380,230)" to="(420,230)"/>
+    <wire from="(480,230)" to="(590,230)"/>
   </circuit>
   <circuit name="rot4">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="rot4"/>
+    <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(240,230)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="width" val="16"/>
@@ -198,12 +258,16 @@ end TCL_Generic;
     <comp lib="8" loc="(430,130)" name="Text">
       <a name="text" val="PUT CIRCUITRY HERE"/>
     </comp>
-    <wire from="(240,230)" to="(300,230)"/>
-    <wire from="(530,230)" to="(650,230)"/>
+    <comp loc="(380,230)" name="rot2"/>
+    <comp loc="(470,230)" name="rot2"/>
+    <wire from="(240,230)" to="(320,230)"/>
+    <wire from="(380,230)" to="(410,230)"/>
+    <wire from="(470,230)" to="(650,230)"/>
   </circuit>
   <circuit name="rot2">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="rot2"/>
+    <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(200,230)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="width" val="16"/>
@@ -217,15 +281,58 @@ end TCL_Generic;
     <comp lib="8" loc="(430,130)" name="Text">
       <a name="text" val="PUT CIRCUITRY HERE"/>
     </comp>
-    <wire from="(200,230)" to="(230,230)"/>
-    <wire from="(610,230)" to="(680,230)"/>
+    <comp loc="(310,230)" name="rot1"/>
+    <comp loc="(390,230)" name="rot1"/>
+    <wire from="(200,230)" to="(250,230)"/>
+    <wire from="(250,230)" to="(260,230)"/>
+    <wire from="(310,230)" to="(330,230)"/>
+    <wire from="(390,230)" to="(680,230)"/>
   </circuit>
   <circuit name="rot1">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="rot1"/>
+    <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(230,230)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="width" val="16"/>
+    </comp>
+    <comp lib="0" loc="(310,230)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(440,230)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit0" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="0"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="facing" val="west"/>
+      <a name="incoming" val="16"/>
     </comp>
     <comp lib="0" loc="(670,230)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -236,7 +343,9 @@ end TCL_Generic;
     <comp lib="8" loc="(430,130)" name="Text">
       <a name="text" val="PUT CIRCUITRY HERE"/>
     </comp>
-    <wire from="(230,230)" to="(270,230)"/>
-    <wire from="(630,230)" to="(670,230)"/>
+    <wire from="(230,230)" to="(310,230)"/>
+    <wire from="(330,220)" to="(420,220)"/>
+    <wire from="(330,230)" to="(420,230)"/>
+    <wire from="(440,230)" to="(670,230)"/>
   </circuit>
 </project>
