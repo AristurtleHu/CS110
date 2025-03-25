@@ -84,15 +84,54 @@ void zadd(Leaderboard *lb, const char *member, int score) {
     print_int(0);
     return;
   }
-  /* Check if member exists */
-  DictEntry *entry = dict_get(lb->dict, member);
-  SkipListNode *node = sl_get_by_score(lb->sl, score);
 
-  // Remove these lines when implementing
-  (void)entry;
-  (void)node;
-  print_int(0);
-  IMPLEMENT_ME();
+  DictEntry *entry = dict_get(lb->dict, member);
+
+  // If member doesn't exist, add to dictionary and skip list
+  if (!entry) {
+    if (dict_insert(lb->dict, member, score) == 0) { // fail
+      print_int(0);
+      return;
+    }
+
+    if (sl_insert(lb->sl, member, score) == 0) { // fail
+      dict_remove(lb->dict, member);
+      print_int(0);
+      return;
+    }
+
+    print_int(1);
+    return;
+  }
+
+  // Member exists, check if score is different
+  if (entry->val == score) { // the same
+    print_int(0);
+    return;
+  }
+
+  // Remove
+  int old_score = entry->val;
+  dict_remove(lb->dict, member);
+  sl_remove(lb->sl, old_score);
+
+  if (dict_insert(lb->dict, member, score) == 0) { // fail
+    // If dictionary update fails, restore old state
+    dict_insert(lb->dict, member, old_score);
+    sl_insert(lb->sl, member, old_score);
+    print_int(0);
+    return;
+  }
+
+  if (sl_insert(lb->sl, member, score) == 0) { // fail
+    // If skip list insertion fails, restore old state
+    dict_insert(lb->dict, member, old_score);
+    sl_insert(lb->sl, member, old_score);
+    print_int(0);
+    return;
+  }
+
+  print_int(1);
 }
 
 /**
@@ -108,11 +147,20 @@ void zadd(Leaderboard *lb, const char *member, int score) {
  * - Print 0 if any parameter is invalid via `print_int()`
  */
 void zrem(Leaderboard *lb, const char *member) {
-  // Remove these lines when implementing
-  (void)lb;
-  (void)member;
-  print_int(0);
-  IMPLEMENT_ME();
+  if (!lb || !member) {
+    print_int(0);
+    return;
+  }
+
+  DictEntry *entry = dict_get(lb->dict, member);
+  if (!entry) {
+    print_int(0);
+    return;
+  }
+
+  sl_remove(lb->sl, entry->val);
+  dict_remove(lb->dict, member);
+  print_int(1);
 }
 
 /**
@@ -127,10 +175,12 @@ void zrem(Leaderboard *lb, const char *member) {
  * - Print 0 if invalid `lb` via `print_int()`
  */
 void zcard(Leaderboard *lb) {
-  // Remove these lines when implementing
-  (void)lb;
-  print_int(0);
-  IMPLEMENT_ME();
+  if (!lb) {
+    print_int(0);
+    return;
+  }
+
+  print_int(sl_get_length(lb->sl));
 }
 
 /**
@@ -146,11 +196,18 @@ void zcard(Leaderboard *lb) {
  * - Call `print_nil()` if member is not found or any parameter is invalid
  */
 void zscore(Leaderboard *lb, const char *member) {
-  // Remove these lines when implementing
-  (void)lb;
-  (void)member;
-  print_nil();
-  IMPLEMENT_ME();
+  if (!lb || !member) {
+    print_nil();
+    return;
+  }
+
+  DictEntry *entry = dict_get(lb->dict, member);
+  if (!entry) {
+    print_nil();
+    return;
+  }
+
+  print_int(entry->val);
 }
 
 /**
@@ -169,12 +226,22 @@ void zscore(Leaderboard *lb, const char *member) {
  * - Call `print_nil()` if not found or any parameter is invalid
  */
 void zrank(Leaderboard *lb, const char *member, int reverse) {
-  // Remove these lines when implementing
-  (void)lb;
-  (void)member;
-  (void)reverse;
-  print_nil();
-  IMPLEMENT_ME();
+  if (!lb || !member) {
+    print_nil();
+    return;
+  }
+
+  DictEntry *entry = dict_get(lb->dict, member);
+  if (!entry) {
+    print_nil();
+    return;
+  }
+
+  int rank = sl_get_rank_by_score(lb->sl, entry->val);
+  if (reverse)
+    rank = sl_get_length(lb->sl) - rank + 1;
+
+  print_int(rank);
 }
 
 /**
@@ -190,11 +257,21 @@ void zrank(Leaderboard *lb, const char *member, int reverse) {
  * - Call `print_nil()` if not found or any parameter is invalid
  */
 void zrevrank(Leaderboard *lb, const char *member) {
-  // Remove these lines when implementing
-  (void)lb;
-  (void)member;
-  print_nil();
-  IMPLEMENT_ME();
+  if (!lb || !member) {
+    print_nil();
+    return;
+  }
+
+  DictEntry *entry = dict_get(lb->dict, member);
+  if (!entry) {
+    print_nil();
+    return;
+  }
+
+  int rank = sl_get_rank_by_score(lb->sl, entry->val);
+  rank = sl_get_length(lb->sl) - rank + 1;
+
+  print_int(rank);
 }
 
 /**
@@ -233,12 +310,28 @@ void zrevrank(Leaderboard *lb, const char *member) {
  * is invalid or no members found
  */
 void zrange(Leaderboard *lb, int start, int end) {
-  // Remove these lines when implementing
-  (void)lb;
-  (void)start;
-  (void)end;
-  print_array(NULL, 0, 0);
-  IMPLEMENT_ME();
+  if (!lb) {
+    print_array(NULL, 0, 0);
+    return;
+  }
+
+  int length = sl_get_length(lb->sl);
+
+  if (start < 0)
+    start = length + start + 1;
+  if (end < 0)
+    end = length + end + 1;
+
+  // Get nodes in range
+  int count = 0;
+  SkipListNode **nodes = sl_get_range_by_rank(lb->sl, start, end, &count);
+  if (!nodes) {
+    print_array(NULL, 0, 0);
+    return;
+  }
+
+  print_array(nodes, count, 0);
+  free(nodes);
 }
 
 /**
@@ -280,12 +373,32 @@ void zrange(Leaderboard *lb, int start, int end) {
  * found
  */
 void zrevrange(Leaderboard *lb, int start, int end) {
-  // Remove these lines when implementing
-  (void)lb;
-  (void)start;
-  (void)end;
-  print_array(NULL, 0, 0);
-  IMPLEMENT_ME();
+  if (!lb) {
+    print_array(NULL, 0, 0);
+    return;
+  }
+
+  int length = sl_get_length(lb->sl);
+
+  if (start < 0)
+    start = length + start + 1;
+  if (end < 0)
+    end = length + end + 1;
+
+  int normal_start = length - end + 1;
+  int normal_end = length - start + 1;
+
+  // Get nodes in range
+  int count = 0;
+  SkipListNode **nodes =
+      sl_get_range_by_rank(lb->sl, normal_start, normal_end, &count);
+  if (!nodes) {
+    print_array(NULL, 0, 0);
+    return;
+  }
+
+  print_array(nodes, count, 1); // Use reverse = 1 to print in reverse order
+  free(nodes);
 }
 
 /**
@@ -304,12 +417,21 @@ void zrevrange(Leaderboard *lb, int start, int end) {
  * found
  */
 void zrangebyscore(Leaderboard *lb, int min_score, int max_score) {
-  // Remove these lines when implementing
-  (void)lb;
-  (void)min_score;
-  (void)max_score;
-  print_array(NULL, 0, 0);
-  IMPLEMENT_ME();
+  if (!lb || min_score > max_score) {
+    print_array(NULL, 0, 0);
+    return;
+  }
+
+  int count = 0;
+  SkipListNode **nodes =
+      sl_get_range_by_score(lb->sl, min_score, max_score, &count);
+  if (!nodes) {
+    print_array(NULL, 0, 0);
+    return;
+  }
+
+  print_array(nodes, count, 0);
+  free(nodes);
 }
 
 /* Set `reverse` to print nodes in reverse order (from last to first) */
