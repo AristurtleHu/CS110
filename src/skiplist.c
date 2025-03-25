@@ -344,7 +344,7 @@ int sl_get_rank_by_score(SkipList *sl, int score) {
   int rank = 1;
   for (; rank <= sl->length; rank++) {
 
-    if (is_end(node))
+    if (is_end(node) || node->score > score)
       return 0;
 
     if (node->score == score)
