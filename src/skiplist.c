@@ -337,6 +337,9 @@ SkipListNode *sl_get_by_rank(SkipList *sl, int rank) {
  * @return      rank (1-based) if found, 0 if not found or error
  */
 int sl_get_rank_by_score(SkipList *sl, int score) {
+  if (!sl)
+    return 0;
+
   SkipListNode *node = sl->header;
   int rank = 1;
   for (; rank <= sl->length; rank++) {
@@ -429,6 +432,11 @@ SkipListNode **sl_get_range_by_score(SkipList *sl, int min_score, int max_score,
   while (!is_end(node) && node->score <= max_score) {
     num_nodes++;
     node = node->forward[1];
+  }
+
+  if (num_nodes == 0) {
+    *count = 0;
+    return NULL;
   }
 
   // get nodes
