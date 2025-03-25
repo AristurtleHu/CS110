@@ -340,15 +340,16 @@ int sl_get_rank_by_score(SkipList *sl, int score) {
   if (!sl)
     return 0;
 
-  SkipListNode *node = sl->header;
+  SkipListNode *node = sl->header->forward[1];
   int rank = 1;
   for (; rank <= sl->length; rank++) {
-    node = node->forward[1];
-    if (!node)
+
+    if (is_end(node))
       return 0;
 
     if (node->score == score)
       return rank;
+    node = node->forward[1];
   }
 
   return rank;
