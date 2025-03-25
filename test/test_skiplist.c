@@ -34,11 +34,17 @@ int main(void) {
   assert_string_eq(node->member, "player3");
   assert_int_eq(node->score, 300);
 
+  sl_print(sl);
+
   assert_int_eq(sl_get_rank_by_score(sl, 300), 3);
+
+  sl_print(sl);
 
   node = sl_get_by_rank(sl, 3);
   assert_true(node != NULL);
   assert_string_eq(node->member, "player3");
+
+  sl_print(sl);
 
   result = sl_get_range_by_rank(sl, 2, 4, &count);
   assert_true(result != NULL);
@@ -48,10 +54,14 @@ int main(void) {
   assert_string_eq(result[2]->member, "player4");
   free(result);
 
+  sl_print(sl);
+
   result = sl_get_range_by_score(sl, 200, 400, &count);
   assert_true(result != NULL);
   assert_int_eq(count, 3);
   free(result);
+
+  sl_print(sl);
 
   assert_int_eq(sl_remove(sl, 300), 1);
   sl_print(sl);

@@ -1,6 +1,8 @@
 #ifndef SKIP_LIST_H
 #define SKIP_LIST_H
 
+#include <stdbool.h>
+
 /**
  * Feel free to add more fields in given structures.
  * DO NOT modify any function declerations below.
@@ -39,6 +41,8 @@ int sl_insert(SkipList *sl, const char *member, int score);
 
 SkipList *sl_create(void);
 void sl_free(SkipList *sl);
+bool is_head(SkipListNode *node);
+bool is_end(SkipListNode *node);
 int sl_get_length(SkipList *sl);
 SkipListNode *sl_get_by_score(SkipList *sl, int score);
 // Declared here only for testing. For normal usage, call `sl_insert()` instead
