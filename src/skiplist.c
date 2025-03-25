@@ -416,13 +416,18 @@ SkipListNode **sl_get_range_by_score(SkipList *sl, int min_score, int max_score,
     return NULL;
   }
 
+  // get the start node
+  SkipListNode *start = sl->header;
+  for (int i = sl->level; i >= 1; i--) {
+    while (start->forward[i] && start->forward[i]->score < min_score)
+      start = start->forward[i];
+  }
+
   // calculate num
   int num_nodes = 0;
-  SkipListNode *node = sl->header->forward[1];
+  SkipListNode *node = start->forward[1];
   while (!is_end(node) && node->score <= max_score) {
-    if (node->score >= min_score) {
-      num_nodes++;
-    }
+    num_nodes++;
     node = node->forward[1];
   }
 
@@ -434,11 +439,9 @@ SkipListNode **sl_get_range_by_score(SkipList *sl, int min_score, int max_score,
   }
 
   int index = 0;
-  node = sl->header->forward[1];
+  node = start->forward[1];
   while (!is_end(node) && node->score <= max_score) {
-    if (node->score >= min_score) {
-      nodes[index++] = node;
-    }
+    nodes[index++] = node;
     node = node->forward[1];
   }
 
