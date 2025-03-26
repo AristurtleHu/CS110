@@ -1,0 +1,35 @@
+================================
+Leaderboard
+Type HELP for available commands
+> (integer) 1
+> (integer) 1
+> (integer) 1
+> (integer) 1
+> (integer) 4
+> (integer) 100
+> (nil)
+> (integer) 1
+> (integer) 2
+> (integer) 3
+> (integer) 4
+> (integer) 1
+> (integer) 2
+> (integer) 3
+> (integer) 4
+> (array) 2 item(s)
+  #1: Dave (75)
+  #2: Bob (85)
+> (array) 3 item(s)
+  #1: Charlie (120)
+  #2: Alice (100)
+  #3: Bob (85)
+> (array) 2 item(s)
+  #1: Bob (85)
+  #2: Alice (100)
+> (integer) 1
+> (integer) 95
+> (integer) 1
+> (nil)
+> (integer) 3
+> (empty array)
+> Program exited!

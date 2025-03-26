@@ -1,0 +1,5 @@
+build
+.clang-format
+.gdbinit
+.cache
+compile_commands.json
