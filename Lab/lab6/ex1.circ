@@ -265,6 +265,11 @@
     <comp lib="1" loc="(290,210)" name="NOT Gate"/>
     <comp lib="1" loc="(290,250)" name="NOT Gate"/>
     <comp lib="1" loc="(290,290)" name="NOT Gate"/>
+    <comp lib="1" loc="(460,230)" name="AND Gate"/>
+    <comp lib="1" loc="(460,320)" name="AND Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(530,270)" name="OR Gate"/>
     <comp lib="6" loc="(410,130)" name="Text">
       <a name="text" val="PUT CIRCUITRY HERE"/>
     </comp>
@@ -272,17 +277,39 @@
     <wire from="(230,240)" to="(250,240)"/>
     <wire from="(230,280)" to="(250,280)"/>
     <wire from="(250,200)" to="(250,210)"/>
-    <wire from="(250,200)" to="(340,200)"/>
+    <wire from="(250,200)" to="(380,200)"/>
     <wire from="(250,210)" to="(260,210)"/>
     <wire from="(250,240)" to="(250,250)"/>
-    <wire from="(250,240)" to="(340,240)"/>
+    <wire from="(250,240)" to="(360,240)"/>
     <wire from="(250,250)" to="(260,250)"/>
     <wire from="(250,280)" to="(250,290)"/>
-    <wire from="(250,280)" to="(300,280)"/>
+    <wire from="(250,280)" to="(340,280)"/>
     <wire from="(250,290)" to="(260,290)"/>
-    <wire from="(290,210)" to="(320,210)"/>
-    <wire from="(290,250)" to="(310,250)"/>
-    <wire from="(520,230)" to="(610,230)"/>
+    <wire from="(290,210)" to="(370,210)"/>
+    <wire from="(290,250)" to="(350,250)"/>
+    <wire from="(290,290)" to="(330,290)"/>
+    <wire from="(330,290)" to="(330,490)"/>
+    <wire from="(340,280)" to="(340,340)"/>
+    <wire from="(340,340)" to="(340,490)"/>
+    <wire from="(340,340)" to="(410,340)"/>
+    <wire from="(350,250)" to="(350,320)"/>
+    <wire from="(350,320)" to="(350,490)"/>
+    <wire from="(350,320)" to="(410,320)"/>
+    <wire from="(360,240)" to="(360,250)"/>
+    <wire from="(360,250)" to="(360,490)"/>
+    <wire from="(360,250)" to="(410,250)"/>
+    <wire from="(370,210)" to="(370,300)"/>
+    <wire from="(370,300)" to="(370,490)"/>
+    <wire from="(370,300)" to="(410,300)"/>
+    <wire from="(380,200)" to="(380,210)"/>
+    <wire from="(380,210)" to="(380,490)"/>
+    <wire from="(380,210)" to="(410,210)"/>
+    <wire from="(460,230)" to="(480,230)"/>
+    <wire from="(460,320)" to="(480,320)"/>
+    <wire from="(480,230)" to="(480,250)"/>
+    <wire from="(480,290)" to="(480,320)"/>
+    <wire from="(530,230)" to="(530,270)"/>
+    <wire from="(530,230)" to="(610,230)"/>
   </circuit>
   <circuit name="StateBitZero">
     <a name="appearance" val="custom"/>
@@ -335,6 +362,8 @@
     <wire from="(250,280)" to="(250,290)"/>
     <wire from="(250,280)" to="(290,280)"/>
     <wire from="(250,290)" to="(260,290)"/>
+    <wire from="(290,210)" to="(600,210)"/>
+    <wire from="(600,210)" to="(600,230)"/>
     <wire from="(600,230)" to="(610,230)"/>
   </circuit>
 </project>
