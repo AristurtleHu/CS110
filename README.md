@@ -8,6 +8,11 @@
 
 Implement a basic RISC-V assembler that converts assembly instructions into machine code.
 
+### 1.2
+[code](https://github.com/AristurtleHu/MD5_in_RISC-V)
+
+Implement the MD5 cryptographic hash algorithm using the RISC-V instruction set (using assembly language)
+
 ## HW
 
 ### HW2
