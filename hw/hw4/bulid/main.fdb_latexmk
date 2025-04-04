@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1743575259 "/mnt/c/Users/yry16/OneDrive/STU/CS/CS110/hw/hw4/main.tex" "bulid/main.pdf" "main" 1743575262
+["pdflatex"] 1743747543 "/mnt/c/Users/yry16/OneDrive/STU/CS/CS110/hw/hw4/main.tex" "bulid/main.pdf" "main" 1743747546
   "/etc/texmf/web2c/texmf.cnf" 1733594965 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/mnt/c/Users/yry16/OneDrive/STU/CS/CS110/hw/hw4/main.tex" 1743575259 6255 7185028e4b4f7d40e74b6568afec9a3c ""
+  "/mnt/c/Users/yry16/OneDrive/STU/CS/CS110/hw/hw4/main.tex" 1743747539 6713 4f3acbb308045d42553abd660ef4abb0 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -109,6 +109,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty" 1399239813 4378 f429f0da968c278653359293040a8f52 ""
   "/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1601931149 46845 3b58f70c6e861a13d927bff09d35ecbc ""
+  "/usr/share/texlive/texmf-dist/tex/latex/float/float.sty" 1137110151 6749 16d2656a1984957e674b149555f1ea1d ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1459978653 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
   "/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def" 1601931164 19103 48d29b6e2a64cb717117ef65f107b404 ""
@@ -155,10 +156,11 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1733597569 2801151 df96c148f8e9c817fe13583acdf0953b ""
   "Q1_circuit.png" 1743365086 23981 10116ed883a2da165311e14e6dae56df ""
   "Q1_comparator_1.png" 1743365086 9863 e31b0ae37ef71aa18149a9bae0a656dd ""
+  "Q1_comparator_2.png" 1743747015 106909 96e0a77c078b112cd7e2046a85d96bd2 ""
   "Q2.png" 1743365086 16662 10d96156fc6b7a187a5468cf792fe0f7 ""
-  "bulid/main.aux" 1743575262 1662 34a82e25faa1f7123037b28b47546476 "pdflatex"
-  "bulid/main.out" 1743575262 348 b368838b1a5fd70dfd6829526dfd85ea "pdflatex"
-  "main.tex" 1743575259 6255 7185028e4b4f7d40e74b6568afec9a3c ""
+  "bulid/main.aux" 1743747546 1662 34a82e25faa1f7123037b28b47546476 "pdflatex"
+  "bulid/main.out" 1743747546 348 b368838b1a5fd70dfd6829526dfd85ea "pdflatex"
+  "main.tex" 1743747539 6713 4f3acbb308045d42553abd660ef4abb0 ""
   "student.sty" 1743365086 2053 b6da16ccd4a7930d8d8de378310dba43 ""
   (generated)
   "bulid/main.aux"

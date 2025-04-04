@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.12.8)  2 APR 2025 14:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.12.8)  4 APR 2025 14:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -512,47 +512,54 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip119
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count306
+\float@exts=\toks35
+\float@box=\box73
+\@float@everytoks=\toks36
+\@floatcapt=\box74
 ) (bulid/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count306
+\scratchcounter=\count307
 \scratchdimen=\dimen193
-\scratchbox=\box73
-\nofMPsegments=\count307
-\nofMParguments=\count308
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count309
+\scratchbox=\box75
+\nofMPsegments=\count308
+\nofMParguments=\count309
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count310
 \MPscratchDim=\dimen194
-\MPnumerator=\count310
-\makeMPintoPDFobject=\count311
-\everyMPtoPDFconversion=\toks36
+\MPnumerator=\count311
+\makeMPintoPDFobject=\count312
+\everyMPtoPDFconversion=\toks38
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 39.
+Package hyperref Info: Link coloring OFF on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -560,71 +567,88 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count312
+\c@section@level=\count313
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
  (bulid/main.out) (bulid/main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
 <Q1_circuit.png, id=20, 477.785pt x 153.57375pt>
 File: Q1_circuit.png Graphic file (type png)
 <use Q1_circuit.png>
-Package pdftex.def Info: Q1_circuit.png  used on input line 50.
+Package pdftex.def Info: Q1_circuit.png  used on input line 51.
 (pdftex.def)             Requested size: 364.19664pt x 117.06172pt.
 <Q1_comparator_1.png, id=23, 205.76875pt x 103.38625pt>
 File: Q1_comparator_1.png Graphic file (type png)
 <use Q1_comparator_1.png>
-Package pdftex.def Info: Q1_comparator_1.png  used on input line 66.
+Package pdftex.def Info: Q1_comparator_1.png  used on input line 67.
 (pdftex.def)             Requested size: 182.09485pt x 91.49129pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
-Package mdframed Info: Not enough space on this page on input line 88.
+<Q1_comparator_2.png, id=24, 843.58018pt x 754.9634pt>
+File: Q1_comparator_2.png Graphic file (type png)
+<use Q1_comparator_2.png>
+Package pdftex.def Info: Q1_comparator_2.png  used on input line 104.
+(pdftex.def)             Requested size: 412.72055pt x 369.37083pt.
+Package mdframed Info: Not enough space on this page on input line 107.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Q1_circuit.png> <./Q1_comparator_1.png>]
-Package mdframed Info: Not enough space on this page on input line 88.
- [2]
-Underfull \hbox (badness 10000) in paragraph at lines 92--94
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.107 \end{answer}
+                  pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.107 \end{answer}
+                   <./Q1_circuit.png> <./Q1_comparator_1.png>]
+Package mdframed Info: Not enough space on this page on input line 107.
+ [2 <./Q1_comparator_2.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
 
  []
 
-<Q2.png, id=42, 876.27374pt x 260.975pt>
+<Q2.png, id=44, 876.27374pt x 260.975pt>
 File: Q2.png Graphic file (type png)
 <use Q2.png>
-Package pdftex.def Info: Q2.png  used on input line 97.
+Package pdftex.def Info: Q2.png  used on input line 116.
 (pdftex.def)             Requested size: 455.24408pt x 135.58434pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-[3 <./Q2.png (PNG copy)>]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 113.
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.128 \newpage
+               <./Q2.png (PNG copy)>]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 132.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 113.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 132.
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
  []
 
@@ -633,18 +657,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B368838B1A5FD70DFD6829526DFD85EA;348.
  ) 
 Here is how much of TeX's memory you used:
- 20403 strings out of 478287
- 380341 string characters out of 5849289
- 668156 words of memory out of 5000000
- 38245 multiletter control sequences out of 15000+600000
+ 20480 strings out of 478287
+ 381656 string characters out of 5849289
+ 669504 words of memory out of 5000000
+ 38317 multiletter control sequences out of 15000+600000
  474320 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,12n,118p,516b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on bulid/main.pdf (4 pages, 110105 bytes).
+Output written on bulid/main.pdf (4 pages, 217808 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
+ 85 PDF objects out of 1000 (max. 8388607)
  60 compressed objects within 1 object stream
  11 named destinations out of 1000 (max. 500000)
- 52 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

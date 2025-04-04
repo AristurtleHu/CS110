@@ -20,6 +20,7 @@
 %-------------------------------%
 \usepackage{amsmath,amssymb,bm}
 \usepackage{hyperref}
+\usepackage{float}
 
 \newcommand{\KL}{\mathrm{KL}}
 \newcommand{\R}{\mathbb{R}}
@@ -69,22 +70,40 @@ The circuit shown in Figure.~\ref{fig:Q1_circuit} is a 1-bit comparator. Answer 
 \end{figure}
 \begin{answer}[Question 1]
     Your answer here.\\
+    (a)
+    $$Y0 = A \cdot \overline{AB}$$
+    $$Y1 = \overline{A \cdot \overline{AB} + B \cdot \overline{AB}}$$
+    $$Y2 = B \cdot \overline{AB}$$
+
     (b) Do not modify the given values in the truth table.\\
     \begin{center}
         \begin{tabular}{ |c|c||c|c|c| }
             \hline
             A & B & Y2 & Y1 & Y0 \\
             \hline
-            0 & 0 &    &    &    \\
+            0 & 0 & 0  & 1  & 0  \\
             \hline
-            0 & 1 &    &    &    \\
+            0 & 1 & 1  & 0  & 0  \\
             \hline
-            1 & 0 &    &    &    \\
+            1 & 0 & 0  & 0  & 1  \\
             \hline
-            1 & 1 &    &    &    \\
+            1 & 1 & 0  & 1  & 0  \\
             \hline
         \end{tabular}
     \end{center}
+
+    (c)
+    $$Y0 = A \cdot \overline{B}$$
+    $$Y1 = AB + \overline{A} \cdot \overline{B}$$
+    $$Y2 = B \cdot \overline{A}$$
+
+    (d) $Y0=1$ represents $A>B$, $Y1=1$ represents $A=B$, and $Y2=1$ represents $A<B$
+
+    (e)
+
+    \includegraphics[width=0.95\textwidth]{Q1_comparator_2.png}
+
+
 \end{answer}
 
 \newpage
