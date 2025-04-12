@@ -82,25 +82,7 @@ end type_architecture;&#13;
 </a>
     </tool>
   </lib>
-  <lib desc="#TCL" name="7">
-    <tool name="TclGeneric">
-      <a name="content">library ieee;
-use ieee.std_logic_1164.all;
-
-entity TCL_Generic is
-  port(
-    --Insert input ports below
-    horloge_i  : in  std_logic;                    -- input bit example
-    val_i      : in  std_logic_vector(3 downto 0); -- input vector example
-
-	  --Insert output ports below
-    max_o      : out std_logic;                    -- output bit example
-    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example
-  );
-end TCL_Generic;
-</a>
-    </tool>
-  </lib>
+  <lib desc="#TCL" name="7"/>
   <lib desc="#Base" name="8">
     <tool name="Text Tool">
       <a name="font" val="SansSerif plain 12"/>
@@ -309,12 +291,20 @@ end TCL_Generic;
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="pipelined"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(160,140)" name="Pin">
+    <comp lib="0" loc="(1200,330)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(1310,290)" name="Tunnel">
+      <a name="label" val="ans"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(160,400)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="multiplier"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(160,190)" name="Pin">
+    <comp lib="0" loc="(160,480)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="CLK"/>
     </comp>
@@ -323,6 +313,57 @@ end TCL_Generic;
       <a name="label" val="multiplicand"/>
       <a name="width" val="4"/>
     </comp>
+    <comp lib="0" loc="(180,400)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(180,480)" name="Tunnel">
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(190,100)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(200,60)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(210,100)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+      <a name="facing" val="west"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(210,100)" name="Tunnel">
+      <a name="label" val="A"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(210,60)" name="Tunnel">
+      <a name="label" val="sum"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(220,270)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="sum"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(220,310)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="A"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(500,90)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="ans"/>
+      <a name="width" val="8"/>
+    </comp>
     <comp lib="0" loc="(560,90)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
@@ -330,7 +371,81 @@ end TCL_Generic;
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <wire from="(160,90)" to="(170,90)"/>
+    <comp lib="0" loc="(660,240)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(660,350)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(660,460)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="0" loc="(660,570)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="4" loc="(1210,260)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(670,170)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(670,280)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(670,390)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="1"/>
+    </comp>
+    <comp lib="4" loc="(670,500)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="1"/>
+    </comp>
+    <comp loc="(240,290)" name="shift_and_add"/>
+    <comp loc="(440,290)" name="shift_and_add"/>
+    <comp loc="(760,290)" name="shift_and_add"/>
+    <comp loc="(960,290)" name="shift_and_add"/>
+    <wire from="(1140,290)" to="(1210,290)"/>
+    <wire from="(1200,330)" to="(1210,330)"/>
+    <wire from="(1270,290)" to="(1310,290)"/>
+    <wire from="(160,400)" to="(180,400)"/>
+    <wire from="(160,480)" to="(180,480)"/>
+    <wire from="(160,90)" to="(190,90)"/>
+    <wire from="(200,380)" to="(250,380)"/>
+    <wire from="(200,390)" to="(450,390)"/>
+    <wire from="(200,400)" to="(670,400)"/>
+    <wire from="(200,410)" to="(600,410)"/>
+    <wire from="(200,60)" to="(210,60)"/>
+    <wire from="(220,270)" to="(250,270)"/>
+    <wire from="(220,310)" to="(250,310)"/>
+    <wire from="(250,270)" to="(250,290)"/>
+    <wire from="(250,330)" to="(250,380)"/>
+    <wire from="(420,290)" to="(450,290)"/>
+    <wire from="(420,310)" to="(450,310)"/>
+    <wire from="(450,330)" to="(450,390)"/>
+    <wire from="(500,90)" to="(560,90)"/>
+    <wire from="(600,410)" to="(600,530)"/>
+    <wire from="(600,530)" to="(670,530)"/>
+    <wire from="(620,200)" to="(620,290)"/>
+    <wire from="(620,200)" to="(670,200)"/>
+    <wire from="(620,310)" to="(670,310)"/>
+    <wire from="(660,240)" to="(670,240)"/>
+    <wire from="(660,350)" to="(670,350)"/>
+    <wire from="(660,460)" to="(670,460)"/>
+    <wire from="(660,570)" to="(670,570)"/>
+    <wire from="(670,400)" to="(670,420)"/>
+    <wire from="(730,200)" to="(770,200)"/>
+    <wire from="(730,310)" to="(770,310)"/>
+    <wire from="(730,420)" to="(770,420)"/>
+    <wire from="(730,530)" to="(970,530)"/>
+    <wire from="(770,200)" to="(770,290)"/>
+    <wire from="(770,330)" to="(770,420)"/>
+    <wire from="(940,290)" to="(970,290)"/>
+    <wire from="(940,310)" to="(970,310)"/>
+    <wire from="(970,330)" to="(970,530)"/>
   </circuit>
   <circuit name="shift_and_add">
     <a name="appearance" val="custom"/>
@@ -353,13 +468,13 @@ end TCL_Generic;
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="171" y="87">shifted</text>
       <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="183" y="73">product</text>
       <circ-anchor facing="east" x="40" y="60"/>
-      <circ-port dir="in" pin="220,220" x="50" y="60"/>
+      <circ-port dir="in" pin="220,210" x="50" y="60"/>
       <circ-port dir="in" pin="220,270" x="50" y="80"/>
       <circ-port dir="in" pin="220,350" x="50" y="100"/>
       <circ-port dir="out" pin="570,220" x="220" y="60"/>
       <circ-port dir="out" pin="570,280" x="220" y="80"/>
     </appear>
-    <comp lib="0" loc="(220,220)" name="Pin">
+    <comp lib="0" loc="(220,210)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="current_sum"/>
       <a name="width" val="8"/>
@@ -394,14 +509,30 @@ end TCL_Generic;
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="2" loc="(320,280)" name="Multiplexer">
+    <comp lib="2" loc="(310,280)" name="Multiplexer">
       <a name="enable" val="true"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="3" loc="(390,220)" name="Adder"/>
-    <comp lib="3" loc="(450,340)" name="Shifter">
-      <a name="shift" val="lr"/>
-    </comp>
+    <comp lib="3" loc="(450,340)" name="Shifter"/>
+    <wire from="(220,210)" to="(350,210)"/>
+    <wire from="(220,270)" to="(250,270)"/>
+    <wire from="(220,350)" to="(290,350)"/>
+    <wire from="(250,270)" to="(250,290)"/>
+    <wire from="(250,290)" to="(250,330)"/>
+    <wire from="(250,290)" to="(280,290)"/>
+    <wire from="(250,330)" to="(410,330)"/>
+    <wire from="(260,250)" to="(270,250)"/>
+    <wire from="(270,250)" to="(270,270)"/>
+    <wire from="(270,270)" to="(280,270)"/>
+    <wire from="(290,300)" to="(290,350)"/>
+    <wire from="(310,280)" to="(330,280)"/>
+    <wire from="(330,230)" to="(330,280)"/>
+    <wire from="(330,230)" to="(350,230)"/>
+    <wire from="(390,220)" to="(570,220)"/>
     <wire from="(400,350)" to="(410,350)"/>
+    <wire from="(450,340)" to="(510,340)"/>
+    <wire from="(510,280)" to="(510,340)"/>
+    <wire from="(510,280)" to="(570,280)"/>
   </circuit>
 </project>
