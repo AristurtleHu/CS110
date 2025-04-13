@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1743754495 "/mnt/c/Users/yry16/OneDrive/STU/CS/CS110/hw/hw4/main.tex" "bulid/main.pdf" "main" 1743754499
+["pdflatex"] 1744524824 "/mnt/c/Users/yry16/OneDrive/STU/CS/CS110/hw/hw4/main.tex" "bulid/main.pdf" "main" 1744524828
   "/etc/texmf/web2c/texmf.cnf" 1733594965 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/mnt/c/Users/yry16/OneDrive/STU/CS/CS110/hw/hw4/main.tex" 1743754495 11713 356baa7e54c825aa114b39337841b3a2 ""
+  "/mnt/c/Users/yry16/OneDrive/STU/CS/CS110/hw/hw4/main.tex" 1744524824 11729 d4277f869c6cf35a845f84687ecbca58 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -171,9 +171,9 @@
   "Q1_comparator_2.png" 1743747015 106909 96e0a77c078b112cd7e2046a85d96bd2 ""
   "Q2.png" 1743365086 16662 10d96156fc6b7a187a5468cf792fe0f7 ""
   "Q3.png" 1743753193 121432 b1100099134f380026bbe5b62852d9ef ""
-  "bulid/main.aux" 1743754499 1662 f7f2c57459eab2050b1b16ae8670143b "pdflatex"
-  "bulid/main.out" 1743754499 348 b368838b1a5fd70dfd6829526dfd85ea "pdflatex"
-  "main.tex" 1743754495 11713 356baa7e54c825aa114b39337841b3a2 ""
+  "bulid/main.aux" 1744524828 1662 f7f2c57459eab2050b1b16ae8670143b "pdflatex"
+  "bulid/main.out" 1744524828 348 b368838b1a5fd70dfd6829526dfd85ea "pdflatex"
+  "main.tex" 1744524824 11729 d4277f869c6cf35a845f84687ecbca58 ""
   "student.sty" 1743365086 2053 b6da16ccd4a7930d8d8de378310dba43 ""
   (generated)
   "bulid/main.aux"
