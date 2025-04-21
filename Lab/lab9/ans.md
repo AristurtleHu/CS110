@@ -4,7 +4,11 @@
 
 > What combination of parameters is producing the hit rate you observe? (Hint: Your answer should be the process of your calculation.)
 
-Hit rate is 0. Each load contain `a[i]` and `a[i+1]` and just check once (option = 0), while step is 8, no hit.
+Hit rate is 0. 
+$$ 
+\text{index} = (i * \text{step-size} * 4 / \text{block-size}) \mod \text{set-num}   
+$$
+All index is 0, no hit.
 
 > What is our hit rate if we increase Rep Count arbitrarily? Why?
 
@@ -18,12 +22,11 @@ Change step size to 1, option = 1. The hit rate is highest: 0.75.
 
 > What combination of parameters is producing the hit rate you observe? (Hint: Your answer should be the process of your calculation.)
 
-Hit rate is 0.75. Each load store `a[i]` to `a[i+3]`, step = 2, option = 1. 
-$$rate = 0.75 /2 * 2 = 0.75$$
+Hit rate is 0.75. Index = 0, 0, 1, 1, 2, 2, ... Each stores a[i] to a[i+4] and option = 1, so 4 access will hit 3. 
 
 > What happens to our hit rate as Rep Count goes to infinity? Why?
 
-Hit rate will be 1. Cache Size is big enough to put all elements of the array. So when rep becomes bigger, the hit rate will converge to 1.
+Hit rate will be 1. Cache will put all elements needed of the array. So when rep becomes bigger, the hit rate will converge to 1.
 
 > Suppose we have a program that uses a very large array and during each Rep, we apply a different operator to the elements of our array (e.g. if Rep Count = 1024, we apply 1024 different operations to each of the array elements). How can we restructure our program to achieve a hit rate like that achieved in this scenario? (Assume that the number of operations we apply to each element is very large and that the result for each element can be computed independently of the other elements.) What is this technique called?
 
@@ -56,12 +59,14 @@ We can set the BLOCK to be a proper value with the cache size, so that the data 
 
 > Run the simulation a few times. Every time, set a different seed value (bottom of the cache window). Note that the hit rate is non-deterministic. What is the range of its hit rate? Why is this the case? ("The cache eviction is random" is not a sufficient answer)
 
-0.0625, 0.125, 0.25, 0.3125, 0.375
-
+e.g., 0.0625, 0.125, 0.25, 0.3125, 0.375
+rate $\in$ [0, 0.5]
+0 stands for all choose the same block
+0.5 stands for LRU
 
 > Which Cache parameter can you modify in order to get a constant hit rate? Record the parameter and its value (and be prepared to show your TA a few runs of the simulation). How does this parameter allow us to get a constant hit rate? And explain why the constant hit rate value is that value.
 
-Set associativity to 1, which turn the cache into a direct-mapped cache, we can get a constant hit rate. Hit rate is 1/2.
+Set associativity to 1, which turn the cache into a direct-mapped cache, we can get a constant hit rate. Hit rate is 0.5.
 
 # EX2
 
