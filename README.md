@@ -4,13 +4,13 @@ Computer Architecture is mandatory for all Computer Science majors. It teaches t
 
 ## Project
 
-### 1.1
+### RISC-V to Machine Code converter
 
 [code](https://github.com/AristurtleHu/RISC-V_to_MC_converter)
 
 Implement a basic RISC-V assembler that converts assembly instructions into machine code.
 
-### 1.2
+### MD5 in RISC-V
 [code](https://github.com/AristurtleHu/MD5_in_RISC-V)
 
 Implement the MD5 cryptographic hash algorithm using the RISC-V instruction set (using assembly language)
