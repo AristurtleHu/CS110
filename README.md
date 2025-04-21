@@ -1,5 +1,7 @@
 # CS110
 
+Computer Architecture is mandatory for all Computer Science majors. It teaches the internal organization and operation of digital computers. The class covers C and assembly language programming, memory management, how higher-level programs are translated into machine language, computer organization, computer logic and CPU design, caches, performance measurement, parallelism, warehouse scale computing, and related topics.
+
 ## Project
 
 ### 1.1
@@ -38,3 +40,10 @@ Implement an efficient leaderboard system composed of two complementary data str
 - Hash Map: Provides fast lookups by member name
 
 The Skip List maintains a mapping from score to member (allowing for rank-based operations), while the Hash Map maintains a mapping from member to score (enabling quick score lookups). Together, they provide optimal performance for all leaderboard operations.
+
+### HW4
+
+Questions about:
+- Combinational logic
+- SDS
+- FSM
