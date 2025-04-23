@@ -15,6 +15,11 @@ Implement a basic RISC-V assembler that converts assembly instructions into mach
 
 Implement the MD5 cryptographic hash algorithm using the RISC-V instruction set (using assembly language)
 
+###  Single-Cycle CPU of RISC-V
+[code](https://github.com/AristurtleHu/Single-Cycle_CPU_of_RISC-V)
+
+Implement a  single-cycle CPU which can process basic instructions of RISC-V
+
 ## HW
 
 ### HW2
