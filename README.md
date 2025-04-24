@@ -52,3 +52,10 @@ Questions about:
 - Combinational logic
 - SDS
 - FSM
+
+### HW5
+
+Questions about:
+- Set-Associative Caches
+- AMAT
+- Hit Rate
