@@ -69,7 +69,7 @@
   L1 hit time $= 2 * 1.6 = 3.2$ cycles.
   L1 local miss rate $= 0.06$.
 
-  AMAT $= 3.2 + 0.06 * (12 + 0.35 * (44 + 0.1 * 320)) = 5.456$ cycles.
+  AMAT $= 3.2 + 0.06 * (12 + 0.35 * (44 + 0.1 * 320)) = 5.516$ cycles.
 ]
 
 
@@ -79,10 +79,12 @@
 
   Beacause of the cache associativity, we can have 2 bodies in the cache at a time. And bodies[i] is accessed each loop, so it will always be in the cache.
 
-  For each i, accesses $= 64 - i$, hit $= floor((64 - i) / 2)$.
-  For $i >= 57$, all kept in cache, so hit = accesses.
+  For each i, accesses $= (64 - i) * 2$, hit $= floor((64 - i) / 2) + 64 - i - 1$.
+  For $i >= 57$, all kept in cache, so hit = accesses. 
+  For $i = 63$, no access.
 
-  In all, hit rate $= (32 + 2 * sum_(i=4)^31 + sum_(i=1)^7) / sum_(i=1)^64 = 0.5$
+  In all, hit rate $= (sum_(i=1)^56 (floor((64 - i) / 2) + 64 - i - 1) + sum_(i=57)^63 ((64 - i) * 2)) / (sum_(i=1)^63 ((64 - i) * 2)) approx
+   0.736$
 ]
 
 #let t4-2 = sol[
