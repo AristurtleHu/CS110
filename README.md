@@ -59,3 +59,23 @@ Questions about:
 - Set-Associative Caches
 - AMAT
 - Hit Rate
+
+### HW6
+
+Implement a simplified RISC-V simulator and a single-level unified cache to observe performance issues related to shared instruction/data caches.
+
+Run by `make && ./main <assembly code to run> 2>main.log`
+
+- Part 1: RISC-V Simulator
+  - Implement a simulator for a subset of RISC-V instructions.
+  - Maintain 32 integer registers and the Program Counter (PC).
+  - Parse and execute assembly code sequentially, assuming instructions start at address 0x0.
+  - Handle `lw`/`sw` by calculating addresses only (no actual memory load/store).
+  - Handle `li` by loading the immediate directly (no pseudo-instruction expansion).
+
+- Part 2: Unified Cache Simulator
+  - Implement a unified cache shared by instructions and data.
+  - Specifications: Write-allocate, 16-byte block size, 4 blocks, Fully Associative, LRU replacement.
+  - Track total memory accesses, instruction cache hits, data cache hits, and total cache misses.
+  - Simulate cache behavior for instruction fetches and `lw`/`sw` data accesses.
+  - Print the final counts for total memory accesses, instruction hits, data hits, and total misses.
