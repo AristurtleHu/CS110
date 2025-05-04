@@ -1,0 +1,1780 @@
+Number of lines in ../hw6-template/sample/vec_add.S: 15
+Instruction: li, rd: 5, imm: 16
+Instruction: li, rd: 6, imm: 0
+Instruction: li, rd: 10, imm: 256
+Instruction: li, rd: 11, imm: 512
+Instruction: slli, rs1: 6, rd: 7, imm: 2
+Instruction: add, rs1: 10, rs2: 7, rd: 28
+Instruction: lw, rs1: 28, rd: 29, imm: 0
+Instruction: add, rs1: 11, rs2: 7, rd: 30
+Instruction: lw, rs1: 30, rd: 31, imm: 0
+Instruction: add, rs1: 29, rs2: 31, rd: 29
+Instruction: addi, rs1: 0, rd: 0, imm: 0
+Instruction: addi, rs1: 0, rd: 0, imm: 0
+Instruction: sw, rs1: 28, rs2: 29, imm: 0
+Instruction: addi, rs1: 6, rd: 6, imm: 1
+Instruction: bne, rs1: 5, rs2: 6, imm: -40
+Instruction memory access at 0x0.
+Find cache slot for address 0x0.
+Cold cache miss at slot 0.
+Execute instruction: li x5 16
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 0 x7: 0 x8: 0 x9: 0 x10: 0 x11: 0 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 0 x29: 0 x30: 0 x31: 0 Program counter: 4
+Cache line 0, address 0x0, last access 1.
+Cache line 1, address 0x0, last access 0.
+Cache line 2, address 0x0, last access 0.
+Cache line 3, address 0x0, last access 0.
+Instruction memory access at 0x4.
+Find cache slot for address 0x4.
+Cache hit at slot 0.
+Execute instruction: li x6 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 0 x7: 0 x8: 0 x9: 0 x10: 0 x11: 0 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 0 x29: 0 x30: 0 x31: 0 Program counter: 8
+Cache line 0, address 0x0, last access 2.
+Cache line 1, address 0x0, last access 0.
+Cache line 2, address 0x0, last access 0.
+Cache line 3, address 0x0, last access 0.
+Instruction memory access at 0x8.
+Find cache slot for address 0x8.
+Cache hit at slot 0.
+Execute instruction: li x10 256
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 0 x7: 0 x8: 0 x9: 0 x10: 256 x11: 0 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 0 x29: 0 x30: 0 x31: 0 Program counter: 12
+Cache line 0, address 0x0, last access 3.
+Cache line 1, address 0x0, last access 0.
+Cache line 2, address 0x0, last access 0.
+Cache line 3, address 0x0, last access 0.
+Instruction memory access at 0xc.
+Find cache slot for address 0xc.
+Cache hit at slot 0.
+Execute instruction: li x11 512
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 0 x7: 0 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 0 x29: 0 x30: 0 x31: 0 Program counter: 16
+Cache line 0, address 0x0, last access 4.
+Cache line 1, address 0x0, last access 0.
+Cache line 2, address 0x0, last access 0.
+Cache line 3, address 0x0, last access 0.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cold cache miss at slot 1.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 0 x7: 0 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 0 x29: 0 x30: 0 x31: 0 Program counter: 20
+Cache line 0, address 0x0, last access 4.
+Cache line 1, address 0x10, last access 5.
+Cache line 2, address 0x0, last access 0.
+Cache line 3, address 0x0, last access 0.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 1.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 0 x7: 0 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 256 x29: 0 x30: 0 x31: 0 Program counter: 24
+Cache line 0, address 0x0, last access 4.
+Cache line 1, address 0x10, last access 6.
+Cache line 2, address 0x0, last access 0.
+Cache line 3, address 0x0, last access 0.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 1.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x100.
+Find cache slot for address 0x100.
+Cold cache miss at slot 2.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 0 x7: 0 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 256 x29: 0 x30: 0 x31: 0 Program counter: 28
+Cache line 0, address 0x0, last access 4.
+Cache line 1, address 0x10, last access 7.
+Cache line 2, address 0x100, last access 8.
+Cache line 3, address 0x0, last access 0.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 1.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 0 x7: 0 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 256 x29: 0 x30: 512 x31: 0 Program counter: 32
+Cache line 0, address 0x0, last access 4.
+Cache line 1, address 0x10, last access 9.
+Cache line 2, address 0x100, last access 8.
+Cache line 3, address 0x0, last access 0.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cold cache miss at slot 3.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x200.
+Find cache slot for address 0x200.
+Cache miss for address 0x200, replacement slot 0.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 0 x7: 0 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 256 x29: 0 x30: 512 x31: 0 Program counter: 36
+Cache line 0, address 0x200, last access 11.
+Cache line 1, address 0x10, last access 9.
+Cache line 2, address 0x100, last access 8.
+Cache line 3, address 0x20, last access 10.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 3.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 0 x7: 0 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 256 x29: 0 x30: 512 x31: 0 Program counter: 40
+Cache line 0, address 0x200, last access 11.
+Cache line 1, address 0x10, last access 9.
+Cache line 2, address 0x100, last access 8.
+Cache line 3, address 0x20, last access 12.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 3.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 0 x7: 0 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 256 x29: 0 x30: 512 x31: 0 Program counter: 44
+Cache line 0, address 0x200, last access 11.
+Cache line 1, address 0x10, last access 9.
+Cache line 2, address 0x100, last access 8.
+Cache line 3, address 0x20, last access 13.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 3.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 0 x7: 0 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 256 x29: 0 x30: 512 x31: 0 Program counter: 48
+Cache line 0, address 0x200, last access 11.
+Cache line 1, address 0x10, last access 9.
+Cache line 2, address 0x100, last access 8.
+Cache line 3, address 0x20, last access 14.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 2.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x100.
+Find cache slot for address 0x100.
+Cache miss for address 0x100, replacement slot 1.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 0 x7: 0 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 256 x29: 0 x30: 512 x31: 0 Program counter: 52
+Cache line 0, address 0x200, last access 11.
+Cache line 1, address 0x100, last access 16.
+Cache line 2, address 0x30, last access 15.
+Cache line 3, address 0x20, last access 14.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 2.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 1 x7: 0 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 256 x29: 0 x30: 512 x31: 0 Program counter: 56
+Cache line 0, address 0x200, last access 11.
+Cache line 1, address 0x100, last access 16.
+Cache line 2, address 0x30, last access 17.
+Cache line 3, address 0x20, last access 14.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 2.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 1 x7: 0 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 256 x29: 0 x30: 512 x31: 0 Program counter: 16
+Cache line 0, address 0x200, last access 11.
+Cache line 1, address 0x100, last access 16.
+Cache line 2, address 0x30, last access 18.
+Cache line 3, address 0x20, last access 14.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 0.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 1 x7: 4 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 256 x29: 0 x30: 512 x31: 0 Program counter: 20
+Cache line 0, address 0x10, last access 19.
+Cache line 1, address 0x100, last access 16.
+Cache line 2, address 0x30, last access 18.
+Cache line 3, address 0x20, last access 14.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 0.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 1 x7: 4 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 260 x29: 0 x30: 512 x31: 0 Program counter: 24
+Cache line 0, address 0x10, last access 20.
+Cache line 1, address 0x100, last access 16.
+Cache line 2, address 0x30, last access 18.
+Cache line 3, address 0x20, last access 14.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 0.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x104.
+Find cache slot for address 0x104.
+Cache hit at slot 1.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 1 x7: 4 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 260 x29: 0 x30: 512 x31: 0 Program counter: 28
+Cache line 0, address 0x10, last access 21.
+Cache line 1, address 0x100, last access 22.
+Cache line 2, address 0x30, last access 18.
+Cache line 3, address 0x20, last access 14.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 0.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 1 x7: 4 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 260 x29: 0 x30: 516 x31: 0 Program counter: 32
+Cache line 0, address 0x10, last access 23.
+Cache line 1, address 0x100, last access 22.
+Cache line 2, address 0x30, last access 18.
+Cache line 3, address 0x20, last access 14.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache hit at slot 3.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x204.
+Find cache slot for address 0x204.
+Cache miss for address 0x204, replacement slot 2.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 1 x7: 4 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 260 x29: 0 x30: 516 x31: 0 Program counter: 36
+Cache line 0, address 0x10, last access 23.
+Cache line 1, address 0x100, last access 22.
+Cache line 2, address 0x200, last access 25.
+Cache line 3, address 0x20, last access 24.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 3.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 1 x7: 4 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 260 x29: 0 x30: 516 x31: 0 Program counter: 40
+Cache line 0, address 0x10, last access 23.
+Cache line 1, address 0x100, last access 22.
+Cache line 2, address 0x200, last access 25.
+Cache line 3, address 0x20, last access 26.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 3.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 1 x7: 4 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 260 x29: 0 x30: 516 x31: 0 Program counter: 44
+Cache line 0, address 0x10, last access 23.
+Cache line 1, address 0x100, last access 22.
+Cache line 2, address 0x200, last access 25.
+Cache line 3, address 0x20, last access 27.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 3.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 1 x7: 4 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 260 x29: 0 x30: 516 x31: 0 Program counter: 48
+Cache line 0, address 0x10, last access 23.
+Cache line 1, address 0x100, last access 22.
+Cache line 2, address 0x200, last access 25.
+Cache line 3, address 0x20, last access 28.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 1.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x104.
+Find cache slot for address 0x104.
+Cache miss for address 0x104, replacement slot 0.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 1 x7: 4 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 260 x29: 0 x30: 516 x31: 0 Program counter: 52
+Cache line 0, address 0x100, last access 30.
+Cache line 1, address 0x30, last access 29.
+Cache line 2, address 0x200, last access 25.
+Cache line 3, address 0x20, last access 28.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 1.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 2 x7: 4 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 260 x29: 0 x30: 516 x31: 0 Program counter: 56
+Cache line 0, address 0x100, last access 30.
+Cache line 1, address 0x30, last access 31.
+Cache line 2, address 0x200, last access 25.
+Cache line 3, address 0x20, last access 28.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 1.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 2 x7: 4 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 260 x29: 0 x30: 516 x31: 0 Program counter: 16
+Cache line 0, address 0x100, last access 30.
+Cache line 1, address 0x30, last access 32.
+Cache line 2, address 0x200, last access 25.
+Cache line 3, address 0x20, last access 28.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 2.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 2 x7: 8 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 260 x29: 0 x30: 516 x31: 0 Program counter: 20
+Cache line 0, address 0x100, last access 30.
+Cache line 1, address 0x30, last access 32.
+Cache line 2, address 0x10, last access 33.
+Cache line 3, address 0x20, last access 28.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 2.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 2 x7: 8 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 264 x29: 0 x30: 516 x31: 0 Program counter: 24
+Cache line 0, address 0x100, last access 30.
+Cache line 1, address 0x30, last access 32.
+Cache line 2, address 0x10, last access 34.
+Cache line 3, address 0x20, last access 28.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 2.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x108.
+Find cache slot for address 0x108.
+Cache hit at slot 0.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 2 x7: 8 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 264 x29: 0 x30: 516 x31: 0 Program counter: 28
+Cache line 0, address 0x100, last access 36.
+Cache line 1, address 0x30, last access 32.
+Cache line 2, address 0x10, last access 35.
+Cache line 3, address 0x20, last access 28.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 2.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 2 x7: 8 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 264 x29: 0 x30: 520 x31: 0 Program counter: 32
+Cache line 0, address 0x100, last access 36.
+Cache line 1, address 0x30, last access 32.
+Cache line 2, address 0x10, last access 37.
+Cache line 3, address 0x20, last access 28.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache hit at slot 3.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x208.
+Find cache slot for address 0x208.
+Cache miss for address 0x208, replacement slot 1.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 2 x7: 8 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 264 x29: 0 x30: 520 x31: 0 Program counter: 36
+Cache line 0, address 0x100, last access 36.
+Cache line 1, address 0x200, last access 39.
+Cache line 2, address 0x10, last access 37.
+Cache line 3, address 0x20, last access 38.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 3.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 2 x7: 8 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 264 x29: 0 x30: 520 x31: 0 Program counter: 40
+Cache line 0, address 0x100, last access 36.
+Cache line 1, address 0x200, last access 39.
+Cache line 2, address 0x10, last access 37.
+Cache line 3, address 0x20, last access 40.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 3.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 2 x7: 8 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 264 x29: 0 x30: 520 x31: 0 Program counter: 44
+Cache line 0, address 0x100, last access 36.
+Cache line 1, address 0x200, last access 39.
+Cache line 2, address 0x10, last access 37.
+Cache line 3, address 0x20, last access 41.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 3.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 2 x7: 8 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 264 x29: 0 x30: 520 x31: 0 Program counter: 48
+Cache line 0, address 0x100, last access 36.
+Cache line 1, address 0x200, last access 39.
+Cache line 2, address 0x10, last access 37.
+Cache line 3, address 0x20, last access 42.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 0.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x108.
+Find cache slot for address 0x108.
+Cache miss for address 0x108, replacement slot 2.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 2 x7: 8 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 264 x29: 0 x30: 520 x31: 0 Program counter: 52
+Cache line 0, address 0x30, last access 43.
+Cache line 1, address 0x200, last access 39.
+Cache line 2, address 0x100, last access 44.
+Cache line 3, address 0x20, last access 42.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 0.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 3 x7: 8 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 264 x29: 0 x30: 520 x31: 0 Program counter: 56
+Cache line 0, address 0x30, last access 45.
+Cache line 1, address 0x200, last access 39.
+Cache line 2, address 0x100, last access 44.
+Cache line 3, address 0x20, last access 42.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 0.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 3 x7: 8 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 264 x29: 0 x30: 520 x31: 0 Program counter: 16
+Cache line 0, address 0x30, last access 46.
+Cache line 1, address 0x200, last access 39.
+Cache line 2, address 0x100, last access 44.
+Cache line 3, address 0x20, last access 42.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 1.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 3 x7: 12 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 264 x29: 0 x30: 520 x31: 0 Program counter: 20
+Cache line 0, address 0x30, last access 46.
+Cache line 1, address 0x10, last access 47.
+Cache line 2, address 0x100, last access 44.
+Cache line 3, address 0x20, last access 42.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 1.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 3 x7: 12 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 268 x29: 0 x30: 520 x31: 0 Program counter: 24
+Cache line 0, address 0x30, last access 46.
+Cache line 1, address 0x10, last access 48.
+Cache line 2, address 0x100, last access 44.
+Cache line 3, address 0x20, last access 42.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 1.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x10c.
+Find cache slot for address 0x10c.
+Cache hit at slot 2.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 3 x7: 12 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 268 x29: 0 x30: 520 x31: 0 Program counter: 28
+Cache line 0, address 0x30, last access 46.
+Cache line 1, address 0x10, last access 49.
+Cache line 2, address 0x100, last access 50.
+Cache line 3, address 0x20, last access 42.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 1.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 3 x7: 12 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 268 x29: 0 x30: 524 x31: 0 Program counter: 32
+Cache line 0, address 0x30, last access 46.
+Cache line 1, address 0x10, last access 51.
+Cache line 2, address 0x100, last access 50.
+Cache line 3, address 0x20, last access 42.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache hit at slot 3.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x20c.
+Find cache slot for address 0x20c.
+Cache miss for address 0x20c, replacement slot 0.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 3 x7: 12 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 268 x29: 0 x30: 524 x31: 0 Program counter: 36
+Cache line 0, address 0x200, last access 53.
+Cache line 1, address 0x10, last access 51.
+Cache line 2, address 0x100, last access 50.
+Cache line 3, address 0x20, last access 52.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 3.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 3 x7: 12 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 268 x29: 0 x30: 524 x31: 0 Program counter: 40
+Cache line 0, address 0x200, last access 53.
+Cache line 1, address 0x10, last access 51.
+Cache line 2, address 0x100, last access 50.
+Cache line 3, address 0x20, last access 54.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 3.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 3 x7: 12 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 268 x29: 0 x30: 524 x31: 0 Program counter: 44
+Cache line 0, address 0x200, last access 53.
+Cache line 1, address 0x10, last access 51.
+Cache line 2, address 0x100, last access 50.
+Cache line 3, address 0x20, last access 55.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 3.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 3 x7: 12 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 268 x29: 0 x30: 524 x31: 0 Program counter: 48
+Cache line 0, address 0x200, last access 53.
+Cache line 1, address 0x10, last access 51.
+Cache line 2, address 0x100, last access 50.
+Cache line 3, address 0x20, last access 56.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 2.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x10c.
+Find cache slot for address 0x10c.
+Cache miss for address 0x10c, replacement slot 1.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 3 x7: 12 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 268 x29: 0 x30: 524 x31: 0 Program counter: 52
+Cache line 0, address 0x200, last access 53.
+Cache line 1, address 0x100, last access 58.
+Cache line 2, address 0x30, last access 57.
+Cache line 3, address 0x20, last access 56.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 2.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 4 x7: 12 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 268 x29: 0 x30: 524 x31: 0 Program counter: 56
+Cache line 0, address 0x200, last access 53.
+Cache line 1, address 0x100, last access 58.
+Cache line 2, address 0x30, last access 59.
+Cache line 3, address 0x20, last access 56.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 2.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 4 x7: 12 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 268 x29: 0 x30: 524 x31: 0 Program counter: 16
+Cache line 0, address 0x200, last access 53.
+Cache line 1, address 0x100, last access 58.
+Cache line 2, address 0x30, last access 60.
+Cache line 3, address 0x20, last access 56.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 0.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 4 x7: 16 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 268 x29: 0 x30: 524 x31: 0 Program counter: 20
+Cache line 0, address 0x10, last access 61.
+Cache line 1, address 0x100, last access 58.
+Cache line 2, address 0x30, last access 60.
+Cache line 3, address 0x20, last access 56.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 0.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 4 x7: 16 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 272 x29: 0 x30: 524 x31: 0 Program counter: 24
+Cache line 0, address 0x10, last access 62.
+Cache line 1, address 0x100, last access 58.
+Cache line 2, address 0x30, last access 60.
+Cache line 3, address 0x20, last access 56.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 0.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x110.
+Find cache slot for address 0x110.
+Cache miss for address 0x110, replacement slot 3.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 4 x7: 16 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 272 x29: 0 x30: 524 x31: 0 Program counter: 28
+Cache line 0, address 0x10, last access 63.
+Cache line 1, address 0x100, last access 58.
+Cache line 2, address 0x30, last access 60.
+Cache line 3, address 0x110, last access 64.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 0.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 4 x7: 16 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 272 x29: 0 x30: 528 x31: 0 Program counter: 32
+Cache line 0, address 0x10, last access 65.
+Cache line 1, address 0x100, last access 58.
+Cache line 2, address 0x30, last access 60.
+Cache line 3, address 0x110, last access 64.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache miss for address 0x20, replacement slot 1.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x210.
+Find cache slot for address 0x210.
+Cache miss for address 0x210, replacement slot 2.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 4 x7: 16 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 272 x29: 0 x30: 528 x31: 0 Program counter: 36
+Cache line 0, address 0x10, last access 65.
+Cache line 1, address 0x20, last access 66.
+Cache line 2, address 0x210, last access 67.
+Cache line 3, address 0x110, last access 64.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 1.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 4 x7: 16 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 272 x29: 0 x30: 528 x31: 0 Program counter: 40
+Cache line 0, address 0x10, last access 65.
+Cache line 1, address 0x20, last access 68.
+Cache line 2, address 0x210, last access 67.
+Cache line 3, address 0x110, last access 64.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 1.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 4 x7: 16 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 272 x29: 0 x30: 528 x31: 0 Program counter: 44
+Cache line 0, address 0x10, last access 65.
+Cache line 1, address 0x20, last access 69.
+Cache line 2, address 0x210, last access 67.
+Cache line 3, address 0x110, last access 64.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 1.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 4 x7: 16 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 272 x29: 0 x30: 528 x31: 0 Program counter: 48
+Cache line 0, address 0x10, last access 65.
+Cache line 1, address 0x20, last access 70.
+Cache line 2, address 0x210, last access 67.
+Cache line 3, address 0x110, last access 64.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 3.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x110.
+Find cache slot for address 0x110.
+Cache miss for address 0x110, replacement slot 0.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 4 x7: 16 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 272 x29: 0 x30: 528 x31: 0 Program counter: 52
+Cache line 0, address 0x110, last access 72.
+Cache line 1, address 0x20, last access 70.
+Cache line 2, address 0x210, last access 67.
+Cache line 3, address 0x30, last access 71.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 3.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 5 x7: 16 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 272 x29: 0 x30: 528 x31: 0 Program counter: 56
+Cache line 0, address 0x110, last access 72.
+Cache line 1, address 0x20, last access 70.
+Cache line 2, address 0x210, last access 67.
+Cache line 3, address 0x30, last access 73.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 3.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 5 x7: 16 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 272 x29: 0 x30: 528 x31: 0 Program counter: 16
+Cache line 0, address 0x110, last access 72.
+Cache line 1, address 0x20, last access 70.
+Cache line 2, address 0x210, last access 67.
+Cache line 3, address 0x30, last access 74.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 2.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 5 x7: 20 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 272 x29: 0 x30: 528 x31: 0 Program counter: 20
+Cache line 0, address 0x110, last access 72.
+Cache line 1, address 0x20, last access 70.
+Cache line 2, address 0x10, last access 75.
+Cache line 3, address 0x30, last access 74.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 2.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 5 x7: 20 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 276 x29: 0 x30: 528 x31: 0 Program counter: 24
+Cache line 0, address 0x110, last access 72.
+Cache line 1, address 0x20, last access 70.
+Cache line 2, address 0x10, last access 76.
+Cache line 3, address 0x30, last access 74.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 2.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x114.
+Find cache slot for address 0x114.
+Cache hit at slot 0.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 5 x7: 20 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 276 x29: 0 x30: 528 x31: 0 Program counter: 28
+Cache line 0, address 0x110, last access 78.
+Cache line 1, address 0x20, last access 70.
+Cache line 2, address 0x10, last access 77.
+Cache line 3, address 0x30, last access 74.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 2.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 5 x7: 20 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 276 x29: 0 x30: 532 x31: 0 Program counter: 32
+Cache line 0, address 0x110, last access 78.
+Cache line 1, address 0x20, last access 70.
+Cache line 2, address 0x10, last access 79.
+Cache line 3, address 0x30, last access 74.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache hit at slot 1.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x214.
+Find cache slot for address 0x214.
+Cache miss for address 0x214, replacement slot 3.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 5 x7: 20 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 276 x29: 0 x30: 532 x31: 0 Program counter: 36
+Cache line 0, address 0x110, last access 78.
+Cache line 1, address 0x20, last access 80.
+Cache line 2, address 0x10, last access 79.
+Cache line 3, address 0x210, last access 81.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 1.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 5 x7: 20 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 276 x29: 0 x30: 532 x31: 0 Program counter: 40
+Cache line 0, address 0x110, last access 78.
+Cache line 1, address 0x20, last access 82.
+Cache line 2, address 0x10, last access 79.
+Cache line 3, address 0x210, last access 81.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 1.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 5 x7: 20 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 276 x29: 0 x30: 532 x31: 0 Program counter: 44
+Cache line 0, address 0x110, last access 78.
+Cache line 1, address 0x20, last access 83.
+Cache line 2, address 0x10, last access 79.
+Cache line 3, address 0x210, last access 81.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 1.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 5 x7: 20 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 276 x29: 0 x30: 532 x31: 0 Program counter: 48
+Cache line 0, address 0x110, last access 78.
+Cache line 1, address 0x20, last access 84.
+Cache line 2, address 0x10, last access 79.
+Cache line 3, address 0x210, last access 81.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 0.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x114.
+Find cache slot for address 0x114.
+Cache miss for address 0x114, replacement slot 2.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 5 x7: 20 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 276 x29: 0 x30: 532 x31: 0 Program counter: 52
+Cache line 0, address 0x30, last access 85.
+Cache line 1, address 0x20, last access 84.
+Cache line 2, address 0x110, last access 86.
+Cache line 3, address 0x210, last access 81.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 0.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 6 x7: 20 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 276 x29: 0 x30: 532 x31: 0 Program counter: 56
+Cache line 0, address 0x30, last access 87.
+Cache line 1, address 0x20, last access 84.
+Cache line 2, address 0x110, last access 86.
+Cache line 3, address 0x210, last access 81.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 0.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 6 x7: 20 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 276 x29: 0 x30: 532 x31: 0 Program counter: 16
+Cache line 0, address 0x30, last access 88.
+Cache line 1, address 0x20, last access 84.
+Cache line 2, address 0x110, last access 86.
+Cache line 3, address 0x210, last access 81.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 3.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 6 x7: 24 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 276 x29: 0 x30: 532 x31: 0 Program counter: 20
+Cache line 0, address 0x30, last access 88.
+Cache line 1, address 0x20, last access 84.
+Cache line 2, address 0x110, last access 86.
+Cache line 3, address 0x10, last access 89.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 3.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 6 x7: 24 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 280 x29: 0 x30: 532 x31: 0 Program counter: 24
+Cache line 0, address 0x30, last access 88.
+Cache line 1, address 0x20, last access 84.
+Cache line 2, address 0x110, last access 86.
+Cache line 3, address 0x10, last access 90.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 3.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x118.
+Find cache slot for address 0x118.
+Cache hit at slot 2.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 6 x7: 24 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 280 x29: 0 x30: 532 x31: 0 Program counter: 28
+Cache line 0, address 0x30, last access 88.
+Cache line 1, address 0x20, last access 84.
+Cache line 2, address 0x110, last access 92.
+Cache line 3, address 0x10, last access 91.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 3.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 6 x7: 24 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 280 x29: 0 x30: 536 x31: 0 Program counter: 32
+Cache line 0, address 0x30, last access 88.
+Cache line 1, address 0x20, last access 84.
+Cache line 2, address 0x110, last access 92.
+Cache line 3, address 0x10, last access 93.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache hit at slot 1.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x218.
+Find cache slot for address 0x218.
+Cache miss for address 0x218, replacement slot 0.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 6 x7: 24 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 280 x29: 0 x30: 536 x31: 0 Program counter: 36
+Cache line 0, address 0x210, last access 95.
+Cache line 1, address 0x20, last access 94.
+Cache line 2, address 0x110, last access 92.
+Cache line 3, address 0x10, last access 93.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 1.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 6 x7: 24 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 280 x29: 0 x30: 536 x31: 0 Program counter: 40
+Cache line 0, address 0x210, last access 95.
+Cache line 1, address 0x20, last access 96.
+Cache line 2, address 0x110, last access 92.
+Cache line 3, address 0x10, last access 93.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 1.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 6 x7: 24 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 280 x29: 0 x30: 536 x31: 0 Program counter: 44
+Cache line 0, address 0x210, last access 95.
+Cache line 1, address 0x20, last access 97.
+Cache line 2, address 0x110, last access 92.
+Cache line 3, address 0x10, last access 93.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 1.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 6 x7: 24 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 280 x29: 0 x30: 536 x31: 0 Program counter: 48
+Cache line 0, address 0x210, last access 95.
+Cache line 1, address 0x20, last access 98.
+Cache line 2, address 0x110, last access 92.
+Cache line 3, address 0x10, last access 93.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 2.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x118.
+Find cache slot for address 0x118.
+Cache miss for address 0x118, replacement slot 3.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 6 x7: 24 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 280 x29: 0 x30: 536 x31: 0 Program counter: 52
+Cache line 0, address 0x210, last access 95.
+Cache line 1, address 0x20, last access 98.
+Cache line 2, address 0x30, last access 99.
+Cache line 3, address 0x110, last access 100.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 2.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 7 x7: 24 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 280 x29: 0 x30: 536 x31: 0 Program counter: 56
+Cache line 0, address 0x210, last access 95.
+Cache line 1, address 0x20, last access 98.
+Cache line 2, address 0x30, last access 101.
+Cache line 3, address 0x110, last access 100.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 2.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 7 x7: 24 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 280 x29: 0 x30: 536 x31: 0 Program counter: 16
+Cache line 0, address 0x210, last access 95.
+Cache line 1, address 0x20, last access 98.
+Cache line 2, address 0x30, last access 102.
+Cache line 3, address 0x110, last access 100.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 0.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 7 x7: 28 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 280 x29: 0 x30: 536 x31: 0 Program counter: 20
+Cache line 0, address 0x10, last access 103.
+Cache line 1, address 0x20, last access 98.
+Cache line 2, address 0x30, last access 102.
+Cache line 3, address 0x110, last access 100.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 0.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 7 x7: 28 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 284 x29: 0 x30: 536 x31: 0 Program counter: 24
+Cache line 0, address 0x10, last access 104.
+Cache line 1, address 0x20, last access 98.
+Cache line 2, address 0x30, last access 102.
+Cache line 3, address 0x110, last access 100.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 0.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x11c.
+Find cache slot for address 0x11c.
+Cache hit at slot 3.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 7 x7: 28 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 284 x29: 0 x30: 536 x31: 0 Program counter: 28
+Cache line 0, address 0x10, last access 105.
+Cache line 1, address 0x20, last access 98.
+Cache line 2, address 0x30, last access 102.
+Cache line 3, address 0x110, last access 106.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 0.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 7 x7: 28 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 284 x29: 0 x30: 540 x31: 0 Program counter: 32
+Cache line 0, address 0x10, last access 107.
+Cache line 1, address 0x20, last access 98.
+Cache line 2, address 0x30, last access 102.
+Cache line 3, address 0x110, last access 106.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache hit at slot 1.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x21c.
+Find cache slot for address 0x21c.
+Cache miss for address 0x21c, replacement slot 2.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 7 x7: 28 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 284 x29: 0 x30: 540 x31: 0 Program counter: 36
+Cache line 0, address 0x10, last access 107.
+Cache line 1, address 0x20, last access 108.
+Cache line 2, address 0x210, last access 109.
+Cache line 3, address 0x110, last access 106.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 1.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 7 x7: 28 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 284 x29: 0 x30: 540 x31: 0 Program counter: 40
+Cache line 0, address 0x10, last access 107.
+Cache line 1, address 0x20, last access 110.
+Cache line 2, address 0x210, last access 109.
+Cache line 3, address 0x110, last access 106.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 1.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 7 x7: 28 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 284 x29: 0 x30: 540 x31: 0 Program counter: 44
+Cache line 0, address 0x10, last access 107.
+Cache line 1, address 0x20, last access 111.
+Cache line 2, address 0x210, last access 109.
+Cache line 3, address 0x110, last access 106.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 1.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 7 x7: 28 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 284 x29: 0 x30: 540 x31: 0 Program counter: 48
+Cache line 0, address 0x10, last access 107.
+Cache line 1, address 0x20, last access 112.
+Cache line 2, address 0x210, last access 109.
+Cache line 3, address 0x110, last access 106.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 3.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x11c.
+Find cache slot for address 0x11c.
+Cache miss for address 0x11c, replacement slot 0.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 7 x7: 28 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 284 x29: 0 x30: 540 x31: 0 Program counter: 52
+Cache line 0, address 0x110, last access 114.
+Cache line 1, address 0x20, last access 112.
+Cache line 2, address 0x210, last access 109.
+Cache line 3, address 0x30, last access 113.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 3.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 8 x7: 28 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 284 x29: 0 x30: 540 x31: 0 Program counter: 56
+Cache line 0, address 0x110, last access 114.
+Cache line 1, address 0x20, last access 112.
+Cache line 2, address 0x210, last access 109.
+Cache line 3, address 0x30, last access 115.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 3.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 8 x7: 28 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 284 x29: 0 x30: 540 x31: 0 Program counter: 16
+Cache line 0, address 0x110, last access 114.
+Cache line 1, address 0x20, last access 112.
+Cache line 2, address 0x210, last access 109.
+Cache line 3, address 0x30, last access 116.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 2.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 8 x7: 32 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 284 x29: 0 x30: 540 x31: 0 Program counter: 20
+Cache line 0, address 0x110, last access 114.
+Cache line 1, address 0x20, last access 112.
+Cache line 2, address 0x10, last access 117.
+Cache line 3, address 0x30, last access 116.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 2.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 8 x7: 32 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 288 x29: 0 x30: 540 x31: 0 Program counter: 24
+Cache line 0, address 0x110, last access 114.
+Cache line 1, address 0x20, last access 112.
+Cache line 2, address 0x10, last access 118.
+Cache line 3, address 0x30, last access 116.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 2.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x120.
+Find cache slot for address 0x120.
+Cache miss for address 0x120, replacement slot 1.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 8 x7: 32 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 288 x29: 0 x30: 540 x31: 0 Program counter: 28
+Cache line 0, address 0x110, last access 114.
+Cache line 1, address 0x120, last access 120.
+Cache line 2, address 0x10, last access 119.
+Cache line 3, address 0x30, last access 116.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 2.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 8 x7: 32 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 288 x29: 0 x30: 544 x31: 0 Program counter: 32
+Cache line 0, address 0x110, last access 114.
+Cache line 1, address 0x120, last access 120.
+Cache line 2, address 0x10, last access 121.
+Cache line 3, address 0x30, last access 116.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache miss for address 0x20, replacement slot 0.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x220.
+Find cache slot for address 0x220.
+Cache miss for address 0x220, replacement slot 3.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 8 x7: 32 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 288 x29: 0 x30: 544 x31: 0 Program counter: 36
+Cache line 0, address 0x20, last access 122.
+Cache line 1, address 0x120, last access 120.
+Cache line 2, address 0x10, last access 121.
+Cache line 3, address 0x220, last access 123.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 0.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 8 x7: 32 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 288 x29: 0 x30: 544 x31: 0 Program counter: 40
+Cache line 0, address 0x20, last access 124.
+Cache line 1, address 0x120, last access 120.
+Cache line 2, address 0x10, last access 121.
+Cache line 3, address 0x220, last access 123.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 0.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 8 x7: 32 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 288 x29: 0 x30: 544 x31: 0 Program counter: 44
+Cache line 0, address 0x20, last access 125.
+Cache line 1, address 0x120, last access 120.
+Cache line 2, address 0x10, last access 121.
+Cache line 3, address 0x220, last access 123.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 0.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 8 x7: 32 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 288 x29: 0 x30: 544 x31: 0 Program counter: 48
+Cache line 0, address 0x20, last access 126.
+Cache line 1, address 0x120, last access 120.
+Cache line 2, address 0x10, last access 121.
+Cache line 3, address 0x220, last access 123.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 1.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x120.
+Find cache slot for address 0x120.
+Cache miss for address 0x120, replacement slot 2.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 8 x7: 32 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 288 x29: 0 x30: 544 x31: 0 Program counter: 52
+Cache line 0, address 0x20, last access 126.
+Cache line 1, address 0x30, last access 127.
+Cache line 2, address 0x120, last access 128.
+Cache line 3, address 0x220, last access 123.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 1.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 9 x7: 32 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 288 x29: 0 x30: 544 x31: 0 Program counter: 56
+Cache line 0, address 0x20, last access 126.
+Cache line 1, address 0x30, last access 129.
+Cache line 2, address 0x120, last access 128.
+Cache line 3, address 0x220, last access 123.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 1.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 9 x7: 32 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 288 x29: 0 x30: 544 x31: 0 Program counter: 16
+Cache line 0, address 0x20, last access 126.
+Cache line 1, address 0x30, last access 130.
+Cache line 2, address 0x120, last access 128.
+Cache line 3, address 0x220, last access 123.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 3.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 9 x7: 36 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 288 x29: 0 x30: 544 x31: 0 Program counter: 20
+Cache line 0, address 0x20, last access 126.
+Cache line 1, address 0x30, last access 130.
+Cache line 2, address 0x120, last access 128.
+Cache line 3, address 0x10, last access 131.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 3.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 9 x7: 36 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 292 x29: 0 x30: 544 x31: 0 Program counter: 24
+Cache line 0, address 0x20, last access 126.
+Cache line 1, address 0x30, last access 130.
+Cache line 2, address 0x120, last access 128.
+Cache line 3, address 0x10, last access 132.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 3.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x124.
+Find cache slot for address 0x124.
+Cache hit at slot 2.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 9 x7: 36 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 292 x29: 0 x30: 544 x31: 0 Program counter: 28
+Cache line 0, address 0x20, last access 126.
+Cache line 1, address 0x30, last access 130.
+Cache line 2, address 0x120, last access 134.
+Cache line 3, address 0x10, last access 133.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 3.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 9 x7: 36 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 292 x29: 0 x30: 548 x31: 0 Program counter: 32
+Cache line 0, address 0x20, last access 126.
+Cache line 1, address 0x30, last access 130.
+Cache line 2, address 0x120, last access 134.
+Cache line 3, address 0x10, last access 135.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache hit at slot 0.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x224.
+Find cache slot for address 0x224.
+Cache miss for address 0x224, replacement slot 1.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 9 x7: 36 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 292 x29: 0 x30: 548 x31: 0 Program counter: 36
+Cache line 0, address 0x20, last access 136.
+Cache line 1, address 0x220, last access 137.
+Cache line 2, address 0x120, last access 134.
+Cache line 3, address 0x10, last access 135.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 0.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 9 x7: 36 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 292 x29: 0 x30: 548 x31: 0 Program counter: 40
+Cache line 0, address 0x20, last access 138.
+Cache line 1, address 0x220, last access 137.
+Cache line 2, address 0x120, last access 134.
+Cache line 3, address 0x10, last access 135.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 0.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 9 x7: 36 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 292 x29: 0 x30: 548 x31: 0 Program counter: 44
+Cache line 0, address 0x20, last access 139.
+Cache line 1, address 0x220, last access 137.
+Cache line 2, address 0x120, last access 134.
+Cache line 3, address 0x10, last access 135.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 0.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 9 x7: 36 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 292 x29: 0 x30: 548 x31: 0 Program counter: 48
+Cache line 0, address 0x20, last access 140.
+Cache line 1, address 0x220, last access 137.
+Cache line 2, address 0x120, last access 134.
+Cache line 3, address 0x10, last access 135.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 2.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x124.
+Find cache slot for address 0x124.
+Cache miss for address 0x124, replacement slot 3.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 9 x7: 36 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 292 x29: 0 x30: 548 x31: 0 Program counter: 52
+Cache line 0, address 0x20, last access 140.
+Cache line 1, address 0x220, last access 137.
+Cache line 2, address 0x30, last access 141.
+Cache line 3, address 0x120, last access 142.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 2.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 10 x7: 36 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 292 x29: 0 x30: 548 x31: 0 Program counter: 56
+Cache line 0, address 0x20, last access 140.
+Cache line 1, address 0x220, last access 137.
+Cache line 2, address 0x30, last access 143.
+Cache line 3, address 0x120, last access 142.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 2.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 10 x7: 36 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 292 x29: 0 x30: 548 x31: 0 Program counter: 16
+Cache line 0, address 0x20, last access 140.
+Cache line 1, address 0x220, last access 137.
+Cache line 2, address 0x30, last access 144.
+Cache line 3, address 0x120, last access 142.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 1.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 10 x7: 40 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 292 x29: 0 x30: 548 x31: 0 Program counter: 20
+Cache line 0, address 0x20, last access 140.
+Cache line 1, address 0x10, last access 145.
+Cache line 2, address 0x30, last access 144.
+Cache line 3, address 0x120, last access 142.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 1.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 10 x7: 40 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 296 x29: 0 x30: 548 x31: 0 Program counter: 24
+Cache line 0, address 0x20, last access 140.
+Cache line 1, address 0x10, last access 146.
+Cache line 2, address 0x30, last access 144.
+Cache line 3, address 0x120, last access 142.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 1.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x128.
+Find cache slot for address 0x128.
+Cache hit at slot 3.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 10 x7: 40 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 296 x29: 0 x30: 548 x31: 0 Program counter: 28
+Cache line 0, address 0x20, last access 140.
+Cache line 1, address 0x10, last access 147.
+Cache line 2, address 0x30, last access 144.
+Cache line 3, address 0x120, last access 148.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 1.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 10 x7: 40 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 296 x29: 0 x30: 552 x31: 0 Program counter: 32
+Cache line 0, address 0x20, last access 140.
+Cache line 1, address 0x10, last access 149.
+Cache line 2, address 0x30, last access 144.
+Cache line 3, address 0x120, last access 148.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache hit at slot 0.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x228.
+Find cache slot for address 0x228.
+Cache miss for address 0x228, replacement slot 2.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 10 x7: 40 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 296 x29: 0 x30: 552 x31: 0 Program counter: 36
+Cache line 0, address 0x20, last access 150.
+Cache line 1, address 0x10, last access 149.
+Cache line 2, address 0x220, last access 151.
+Cache line 3, address 0x120, last access 148.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 0.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 10 x7: 40 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 296 x29: 0 x30: 552 x31: 0 Program counter: 40
+Cache line 0, address 0x20, last access 152.
+Cache line 1, address 0x10, last access 149.
+Cache line 2, address 0x220, last access 151.
+Cache line 3, address 0x120, last access 148.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 0.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 10 x7: 40 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 296 x29: 0 x30: 552 x31: 0 Program counter: 44
+Cache line 0, address 0x20, last access 153.
+Cache line 1, address 0x10, last access 149.
+Cache line 2, address 0x220, last access 151.
+Cache line 3, address 0x120, last access 148.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 0.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 10 x7: 40 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 296 x29: 0 x30: 552 x31: 0 Program counter: 48
+Cache line 0, address 0x20, last access 154.
+Cache line 1, address 0x10, last access 149.
+Cache line 2, address 0x220, last access 151.
+Cache line 3, address 0x120, last access 148.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 3.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x128.
+Find cache slot for address 0x128.
+Cache miss for address 0x128, replacement slot 1.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 10 x7: 40 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 296 x29: 0 x30: 552 x31: 0 Program counter: 52
+Cache line 0, address 0x20, last access 154.
+Cache line 1, address 0x120, last access 156.
+Cache line 2, address 0x220, last access 151.
+Cache line 3, address 0x30, last access 155.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 3.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 11 x7: 40 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 296 x29: 0 x30: 552 x31: 0 Program counter: 56
+Cache line 0, address 0x20, last access 154.
+Cache line 1, address 0x120, last access 156.
+Cache line 2, address 0x220, last access 151.
+Cache line 3, address 0x30, last access 157.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 3.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 11 x7: 40 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 296 x29: 0 x30: 552 x31: 0 Program counter: 16
+Cache line 0, address 0x20, last access 154.
+Cache line 1, address 0x120, last access 156.
+Cache line 2, address 0x220, last access 151.
+Cache line 3, address 0x30, last access 158.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 2.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 11 x7: 44 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 296 x29: 0 x30: 552 x31: 0 Program counter: 20
+Cache line 0, address 0x20, last access 154.
+Cache line 1, address 0x120, last access 156.
+Cache line 2, address 0x10, last access 159.
+Cache line 3, address 0x30, last access 158.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 2.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 11 x7: 44 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 300 x29: 0 x30: 552 x31: 0 Program counter: 24
+Cache line 0, address 0x20, last access 154.
+Cache line 1, address 0x120, last access 156.
+Cache line 2, address 0x10, last access 160.
+Cache line 3, address 0x30, last access 158.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 2.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x12c.
+Find cache slot for address 0x12c.
+Cache hit at slot 1.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 11 x7: 44 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 300 x29: 0 x30: 552 x31: 0 Program counter: 28
+Cache line 0, address 0x20, last access 154.
+Cache line 1, address 0x120, last access 162.
+Cache line 2, address 0x10, last access 161.
+Cache line 3, address 0x30, last access 158.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 2.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 11 x7: 44 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 300 x29: 0 x30: 556 x31: 0 Program counter: 32
+Cache line 0, address 0x20, last access 154.
+Cache line 1, address 0x120, last access 162.
+Cache line 2, address 0x10, last access 163.
+Cache line 3, address 0x30, last access 158.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache hit at slot 0.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x22c.
+Find cache slot for address 0x22c.
+Cache miss for address 0x22c, replacement slot 3.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 11 x7: 44 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 300 x29: 0 x30: 556 x31: 0 Program counter: 36
+Cache line 0, address 0x20, last access 164.
+Cache line 1, address 0x120, last access 162.
+Cache line 2, address 0x10, last access 163.
+Cache line 3, address 0x220, last access 165.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 0.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 11 x7: 44 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 300 x29: 0 x30: 556 x31: 0 Program counter: 40
+Cache line 0, address 0x20, last access 166.
+Cache line 1, address 0x120, last access 162.
+Cache line 2, address 0x10, last access 163.
+Cache line 3, address 0x220, last access 165.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 0.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 11 x7: 44 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 300 x29: 0 x30: 556 x31: 0 Program counter: 44
+Cache line 0, address 0x20, last access 167.
+Cache line 1, address 0x120, last access 162.
+Cache line 2, address 0x10, last access 163.
+Cache line 3, address 0x220, last access 165.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 0.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 11 x7: 44 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 300 x29: 0 x30: 556 x31: 0 Program counter: 48
+Cache line 0, address 0x20, last access 168.
+Cache line 1, address 0x120, last access 162.
+Cache line 2, address 0x10, last access 163.
+Cache line 3, address 0x220, last access 165.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 1.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x12c.
+Find cache slot for address 0x12c.
+Cache miss for address 0x12c, replacement slot 2.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 11 x7: 44 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 300 x29: 0 x30: 556 x31: 0 Program counter: 52
+Cache line 0, address 0x20, last access 168.
+Cache line 1, address 0x30, last access 169.
+Cache line 2, address 0x120, last access 170.
+Cache line 3, address 0x220, last access 165.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 1.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 12 x7: 44 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 300 x29: 0 x30: 556 x31: 0 Program counter: 56
+Cache line 0, address 0x20, last access 168.
+Cache line 1, address 0x30, last access 171.
+Cache line 2, address 0x120, last access 170.
+Cache line 3, address 0x220, last access 165.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 1.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 12 x7: 44 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 300 x29: 0 x30: 556 x31: 0 Program counter: 16
+Cache line 0, address 0x20, last access 168.
+Cache line 1, address 0x30, last access 172.
+Cache line 2, address 0x120, last access 170.
+Cache line 3, address 0x220, last access 165.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 3.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 12 x7: 48 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 300 x29: 0 x30: 556 x31: 0 Program counter: 20
+Cache line 0, address 0x20, last access 168.
+Cache line 1, address 0x30, last access 172.
+Cache line 2, address 0x120, last access 170.
+Cache line 3, address 0x10, last access 173.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 3.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 12 x7: 48 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 304 x29: 0 x30: 556 x31: 0 Program counter: 24
+Cache line 0, address 0x20, last access 168.
+Cache line 1, address 0x30, last access 172.
+Cache line 2, address 0x120, last access 170.
+Cache line 3, address 0x10, last access 174.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 3.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x130.
+Find cache slot for address 0x130.
+Cache miss for address 0x130, replacement slot 0.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 12 x7: 48 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 304 x29: 0 x30: 556 x31: 0 Program counter: 28
+Cache line 0, address 0x130, last access 176.
+Cache line 1, address 0x30, last access 172.
+Cache line 2, address 0x120, last access 170.
+Cache line 3, address 0x10, last access 175.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 3.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 12 x7: 48 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 304 x29: 0 x30: 560 x31: 0 Program counter: 32
+Cache line 0, address 0x130, last access 176.
+Cache line 1, address 0x30, last access 172.
+Cache line 2, address 0x120, last access 170.
+Cache line 3, address 0x10, last access 177.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache miss for address 0x20, replacement slot 2.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x230.
+Find cache slot for address 0x230.
+Cache miss for address 0x230, replacement slot 1.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 12 x7: 48 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 304 x29: 0 x30: 560 x31: 0 Program counter: 36
+Cache line 0, address 0x130, last access 176.
+Cache line 1, address 0x230, last access 179.
+Cache line 2, address 0x20, last access 178.
+Cache line 3, address 0x10, last access 177.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 2.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 12 x7: 48 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 304 x29: 0 x30: 560 x31: 0 Program counter: 40
+Cache line 0, address 0x130, last access 176.
+Cache line 1, address 0x230, last access 179.
+Cache line 2, address 0x20, last access 180.
+Cache line 3, address 0x10, last access 177.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 2.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 12 x7: 48 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 304 x29: 0 x30: 560 x31: 0 Program counter: 44
+Cache line 0, address 0x130, last access 176.
+Cache line 1, address 0x230, last access 179.
+Cache line 2, address 0x20, last access 181.
+Cache line 3, address 0x10, last access 177.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 2.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 12 x7: 48 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 304 x29: 0 x30: 560 x31: 0 Program counter: 48
+Cache line 0, address 0x130, last access 176.
+Cache line 1, address 0x230, last access 179.
+Cache line 2, address 0x20, last access 182.
+Cache line 3, address 0x10, last access 177.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 0.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x130.
+Find cache slot for address 0x130.
+Cache miss for address 0x130, replacement slot 3.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 12 x7: 48 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 304 x29: 0 x30: 560 x31: 0 Program counter: 52
+Cache line 0, address 0x30, last access 183.
+Cache line 1, address 0x230, last access 179.
+Cache line 2, address 0x20, last access 182.
+Cache line 3, address 0x130, last access 184.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 0.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 13 x7: 48 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 304 x29: 0 x30: 560 x31: 0 Program counter: 56
+Cache line 0, address 0x30, last access 185.
+Cache line 1, address 0x230, last access 179.
+Cache line 2, address 0x20, last access 182.
+Cache line 3, address 0x130, last access 184.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 0.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 13 x7: 48 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 304 x29: 0 x30: 560 x31: 0 Program counter: 16
+Cache line 0, address 0x30, last access 186.
+Cache line 1, address 0x230, last access 179.
+Cache line 2, address 0x20, last access 182.
+Cache line 3, address 0x130, last access 184.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 1.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 13 x7: 52 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 304 x29: 0 x30: 560 x31: 0 Program counter: 20
+Cache line 0, address 0x30, last access 186.
+Cache line 1, address 0x10, last access 187.
+Cache line 2, address 0x20, last access 182.
+Cache line 3, address 0x130, last access 184.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 1.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 13 x7: 52 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 308 x29: 0 x30: 560 x31: 0 Program counter: 24
+Cache line 0, address 0x30, last access 186.
+Cache line 1, address 0x10, last access 188.
+Cache line 2, address 0x20, last access 182.
+Cache line 3, address 0x130, last access 184.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 1.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x134.
+Find cache slot for address 0x134.
+Cache hit at slot 3.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 13 x7: 52 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 308 x29: 0 x30: 560 x31: 0 Program counter: 28
+Cache line 0, address 0x30, last access 186.
+Cache line 1, address 0x10, last access 189.
+Cache line 2, address 0x20, last access 182.
+Cache line 3, address 0x130, last access 190.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 1.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 13 x7: 52 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 308 x29: 0 x30: 564 x31: 0 Program counter: 32
+Cache line 0, address 0x30, last access 186.
+Cache line 1, address 0x10, last access 191.
+Cache line 2, address 0x20, last access 182.
+Cache line 3, address 0x130, last access 190.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache hit at slot 2.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x234.
+Find cache slot for address 0x234.
+Cache miss for address 0x234, replacement slot 0.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 13 x7: 52 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 308 x29: 0 x30: 564 x31: 0 Program counter: 36
+Cache line 0, address 0x230, last access 193.
+Cache line 1, address 0x10, last access 191.
+Cache line 2, address 0x20, last access 192.
+Cache line 3, address 0x130, last access 190.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 2.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 13 x7: 52 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 308 x29: 0 x30: 564 x31: 0 Program counter: 40
+Cache line 0, address 0x230, last access 193.
+Cache line 1, address 0x10, last access 191.
+Cache line 2, address 0x20, last access 194.
+Cache line 3, address 0x130, last access 190.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 2.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 13 x7: 52 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 308 x29: 0 x30: 564 x31: 0 Program counter: 44
+Cache line 0, address 0x230, last access 193.
+Cache line 1, address 0x10, last access 191.
+Cache line 2, address 0x20, last access 195.
+Cache line 3, address 0x130, last access 190.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 2.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 13 x7: 52 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 308 x29: 0 x30: 564 x31: 0 Program counter: 48
+Cache line 0, address 0x230, last access 193.
+Cache line 1, address 0x10, last access 191.
+Cache line 2, address 0x20, last access 196.
+Cache line 3, address 0x130, last access 190.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 3.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x134.
+Find cache slot for address 0x134.
+Cache miss for address 0x134, replacement slot 1.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 13 x7: 52 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 308 x29: 0 x30: 564 x31: 0 Program counter: 52
+Cache line 0, address 0x230, last access 193.
+Cache line 1, address 0x130, last access 198.
+Cache line 2, address 0x20, last access 196.
+Cache line 3, address 0x30, last access 197.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 3.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 14 x7: 52 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 308 x29: 0 x30: 564 x31: 0 Program counter: 56
+Cache line 0, address 0x230, last access 193.
+Cache line 1, address 0x130, last access 198.
+Cache line 2, address 0x20, last access 196.
+Cache line 3, address 0x30, last access 199.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 3.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 14 x7: 52 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 308 x29: 0 x30: 564 x31: 0 Program counter: 16
+Cache line 0, address 0x230, last access 193.
+Cache line 1, address 0x130, last access 198.
+Cache line 2, address 0x20, last access 196.
+Cache line 3, address 0x30, last access 200.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 0.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 14 x7: 56 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 308 x29: 0 x30: 564 x31: 0 Program counter: 20
+Cache line 0, address 0x10, last access 201.
+Cache line 1, address 0x130, last access 198.
+Cache line 2, address 0x20, last access 196.
+Cache line 3, address 0x30, last access 200.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 0.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 14 x7: 56 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 312 x29: 0 x30: 564 x31: 0 Program counter: 24
+Cache line 0, address 0x10, last access 202.
+Cache line 1, address 0x130, last access 198.
+Cache line 2, address 0x20, last access 196.
+Cache line 3, address 0x30, last access 200.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 0.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x138.
+Find cache slot for address 0x138.
+Cache hit at slot 1.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 14 x7: 56 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 312 x29: 0 x30: 564 x31: 0 Program counter: 28
+Cache line 0, address 0x10, last access 203.
+Cache line 1, address 0x130, last access 204.
+Cache line 2, address 0x20, last access 196.
+Cache line 3, address 0x30, last access 200.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 0.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 14 x7: 56 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 312 x29: 0 x30: 568 x31: 0 Program counter: 32
+Cache line 0, address 0x10, last access 205.
+Cache line 1, address 0x130, last access 204.
+Cache line 2, address 0x20, last access 196.
+Cache line 3, address 0x30, last access 200.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache hit at slot 2.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x238.
+Find cache slot for address 0x238.
+Cache miss for address 0x238, replacement slot 3.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 14 x7: 56 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 312 x29: 0 x30: 568 x31: 0 Program counter: 36
+Cache line 0, address 0x10, last access 205.
+Cache line 1, address 0x130, last access 204.
+Cache line 2, address 0x20, last access 206.
+Cache line 3, address 0x230, last access 207.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 2.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 14 x7: 56 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 312 x29: 0 x30: 568 x31: 0 Program counter: 40
+Cache line 0, address 0x10, last access 205.
+Cache line 1, address 0x130, last access 204.
+Cache line 2, address 0x20, last access 208.
+Cache line 3, address 0x230, last access 207.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 2.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 14 x7: 56 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 312 x29: 0 x30: 568 x31: 0 Program counter: 44
+Cache line 0, address 0x10, last access 205.
+Cache line 1, address 0x130, last access 204.
+Cache line 2, address 0x20, last access 209.
+Cache line 3, address 0x230, last access 207.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 2.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 14 x7: 56 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 312 x29: 0 x30: 568 x31: 0 Program counter: 48
+Cache line 0, address 0x10, last access 205.
+Cache line 1, address 0x130, last access 204.
+Cache line 2, address 0x20, last access 210.
+Cache line 3, address 0x230, last access 207.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 1.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x138.
+Find cache slot for address 0x138.
+Cache miss for address 0x138, replacement slot 0.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 14 x7: 56 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 312 x29: 0 x30: 568 x31: 0 Program counter: 52
+Cache line 0, address 0x130, last access 212.
+Cache line 1, address 0x30, last access 211.
+Cache line 2, address 0x20, last access 210.
+Cache line 3, address 0x230, last access 207.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 1.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 15 x7: 56 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 312 x29: 0 x30: 568 x31: 0 Program counter: 56
+Cache line 0, address 0x130, last access 212.
+Cache line 1, address 0x30, last access 213.
+Cache line 2, address 0x20, last access 210.
+Cache line 3, address 0x230, last access 207.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 1.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 15 x7: 56 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 312 x29: 0 x30: 568 x31: 0 Program counter: 16
+Cache line 0, address 0x130, last access 212.
+Cache line 1, address 0x30, last access 214.
+Cache line 2, address 0x20, last access 210.
+Cache line 3, address 0x230, last access 207.
+Instruction memory access at 0x10.
+Find cache slot for address 0x10.
+Cache miss for address 0x10, replacement slot 3.
+Execute instruction: slli x7 x6 2
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 15 x7: 60 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 312 x29: 0 x30: 568 x31: 0 Program counter: 20
+Cache line 0, address 0x130, last access 212.
+Cache line 1, address 0x30, last access 214.
+Cache line 2, address 0x20, last access 210.
+Cache line 3, address 0x10, last access 215.
+Instruction memory access at 0x14.
+Find cache slot for address 0x14.
+Cache hit at slot 3.
+Execute instruction: add x28 x10 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 15 x7: 60 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 316 x29: 0 x30: 568 x31: 0 Program counter: 24
+Cache line 0, address 0x130, last access 212.
+Cache line 1, address 0x30, last access 214.
+Cache line 2, address 0x20, last access 210.
+Cache line 3, address 0x10, last access 216.
+Instruction memory access at 0x18.
+Find cache slot for address 0x18.
+Cache hit at slot 3.
+Execute instruction: lw x29 0(x28)
+Data memory access at 0x13c.
+Find cache slot for address 0x13c.
+Cache hit at slot 0.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 15 x7: 60 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 316 x29: 0 x30: 568 x31: 0 Program counter: 28
+Cache line 0, address 0x130, last access 218.
+Cache line 1, address 0x30, last access 214.
+Cache line 2, address 0x20, last access 210.
+Cache line 3, address 0x10, last access 217.
+Instruction memory access at 0x1c.
+Find cache slot for address 0x1c.
+Cache hit at slot 3.
+Execute instruction: add x30 x11 x7
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 15 x7: 60 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 316 x29: 0 x30: 572 x31: 0 Program counter: 32
+Cache line 0, address 0x130, last access 218.
+Cache line 1, address 0x30, last access 214.
+Cache line 2, address 0x20, last access 210.
+Cache line 3, address 0x10, last access 219.
+Instruction memory access at 0x20.
+Find cache slot for address 0x20.
+Cache hit at slot 2.
+Execute instruction: lw x31 0(x30)
+Data memory access at 0x23c.
+Find cache slot for address 0x23c.
+Cache miss for address 0x23c, replacement slot 1.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 15 x7: 60 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 316 x29: 0 x30: 572 x31: 0 Program counter: 36
+Cache line 0, address 0x130, last access 218.
+Cache line 1, address 0x230, last access 221.
+Cache line 2, address 0x20, last access 220.
+Cache line 3, address 0x10, last access 219.
+Instruction memory access at 0x24.
+Find cache slot for address 0x24.
+Cache hit at slot 2.
+Execute instruction: add x29 x29 x31
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 15 x7: 60 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 316 x29: 0 x30: 572 x31: 0 Program counter: 40
+Cache line 0, address 0x130, last access 218.
+Cache line 1, address 0x230, last access 221.
+Cache line 2, address 0x20, last access 222.
+Cache line 3, address 0x10, last access 219.
+Instruction memory access at 0x28.
+Find cache slot for address 0x28.
+Cache hit at slot 2.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 15 x7: 60 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 316 x29: 0 x30: 572 x31: 0 Program counter: 44
+Cache line 0, address 0x130, last access 218.
+Cache line 1, address 0x230, last access 221.
+Cache line 2, address 0x20, last access 223.
+Cache line 3, address 0x10, last access 219.
+Instruction memory access at 0x2c.
+Find cache slot for address 0x2c.
+Cache hit at slot 2.
+Execute instruction: addi x0 x0 0
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 15 x7: 60 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 316 x29: 0 x30: 572 x31: 0 Program counter: 48
+Cache line 0, address 0x130, last access 218.
+Cache line 1, address 0x230, last access 221.
+Cache line 2, address 0x20, last access 224.
+Cache line 3, address 0x10, last access 219.
+Instruction memory access at 0x30.
+Find cache slot for address 0x30.
+Cache miss for address 0x30, replacement slot 0.
+Execute instruction: sw x29 0(x28)
+Data memory access at 0x13c.
+Find cache slot for address 0x13c.
+Cache miss for address 0x13c, replacement slot 3.
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 15 x7: 60 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 316 x29: 0 x30: 572 x31: 0 Program counter: 52
+Cache line 0, address 0x30, last access 225.
+Cache line 1, address 0x230, last access 221.
+Cache line 2, address 0x20, last access 224.
+Cache line 3, address 0x130, last access 226.
+Instruction memory access at 0x34.
+Find cache slot for address 0x34.
+Cache hit at slot 0.
+Execute instruction: addi x6 x6 1
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 16 x7: 60 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 316 x29: 0 x30: 572 x31: 0 Program counter: 56
+Cache line 0, address 0x30, last access 227.
+Cache line 1, address 0x230, last access 221.
+Cache line 2, address 0x20, last access 224.
+Cache line 3, address 0x130, last access 226.
+Instruction memory access at 0x38.
+Find cache slot for address 0x38.
+Cache hit at slot 0.
+Execute instruction: bne x5 x6 -40
+x0: 0 x1: 0 x2: 0 x3: 0 x4: 0 x5: 16 x6: 16 x7: 60 x8: 0 x9: 0 x10: 256 x11: 512 x12: 0 x13: 0 x14: 0 x15: 0 x16: 0 x17: 0 x18: 0 x19: 0 x20: 0 x21: 0 x22: 0 x23: 0 x24: 0 x25: 0 x26: 0 x27: 0 x28: 316 x29: 0 x30: 572 x31: 0 Program counter: 60
+Cache line 0, address 0x30, last access 228.
+Cache line 1, address 0x230, last access 221.
+Cache line 2, address 0x20, last access 224.
+Cache line 3, address 0x130, last access 226.
