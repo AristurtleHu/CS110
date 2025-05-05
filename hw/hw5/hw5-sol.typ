@@ -77,14 +77,16 @@
   Each block can store bodies[i] and bodies[i + 1].
   4 blocks, 2 sets in cache.
 
-  Beacause of the cache associativity, we can have 2 bodies in the cache at a time. And bodies[i] is accessed each loop, so it will always be in the cache.
+  Beacause of the cache associativity, we can have 2 bodies in the cache at a time. And bodies[i] is accessed in each loop, so it will always be in the cache.
 
-  For each i, accesses $= (64 - i) * 2$, hit $= floor((64 - i) / 2) + 64 - i - 1$.
+  For each i, accesses $= (63 - i) * 2$, hit $= floor((64 - i) / 2) + 63 - i - 1$.
+
   For $i >= 57$, all kept in cache, so hit = accesses.
+
   For $i = 63$, no access.
 
-  In all, hit rate $= (sum_(i=1)^56 (floor((64 - i) / 2) + 64 - i - 1) + sum_(i=57)^63 ((64 - i) * 2)) / (sum_(i=1)^63 ((64 - i) * 2)) approx
-  0.736$
+  In all, hit rate $= (sum_(i=0)^56 (floor((64 - i) / 2) + 63 - i - 1) + sum_(i=57)^63 ((63 - i) * 2)) / (sum_(i=0)^63 ((63 - i) * 2)) = 2992 / 4032 approx
+  0.742$
 ]
 
 #let t4-2 = sol[
@@ -107,12 +109,9 @@
                 for (int i = ii; i < i_limit; i++) {
                     int j_start = (ii == jj) ? i + 1 : jj; // ensure j > i
 
-                    if (j_start < j_limit) {
-                        for (int j = j_start; j < j_limit; j++) {
-                            if (is_collide(bodies[i], bodies[j])) {
-                                count++;
-                            }
-                        }
+                    for (int j = j_start; j < j_limit; j++) {
+                        if (is_collide(bodies[i], bodies[j]))
+                            count++;
                     }
                 }
             }

@@ -2,20 +2,20 @@ import math
 
 # Calculate the first sum (i=1 to 56)
 sum1 = 0
-for i in range(1, 57):
-    term = math.floor((64 - i) / 2) + (64 - i) - 1
+for i in range(0, 57):
+    term = math.floor((64 - i) / 2) + (63 - i) - 1
     sum1 += term
 
 # Calculate the second sum (i=57 to 63)
 sum2 = 0
 for i in range(57, 64):
-    term = (64 - i) * 2
+    term = (63 - i) * 2
     sum2 += term
 
 # Calculate the third sum (denominator, i=1 to 63)
 sum3 = 0
-for i in range(1, 64):
-    term = (64 - i) * 2
+for i in range(0, 64):
+    term = (63 - i) * 2
     sum3 += term
 
 # Calculate the numerator
@@ -31,10 +31,10 @@ else:
     result = numerator / denominator
 
 # Print the result
-print(f"Sum 1 (i=1 to 56): {sum1}")
+print(f"Sum 1 (i=0 to 56): {sum1}")
 print(f"Sum 2 (i=57 to 63): {sum2}")
 print(f"Numerator (Sum 1 + Sum 2): {numerator}")
-print(f"Denominator (Sum 3, i=1 to 63): {denominator}")
+print(f"Denominator (Sum 3, i=0 to 63): {denominator}")
 print(f"Result: {result}")
 
 # Alternative calculation using list comprehensions (more concise)
