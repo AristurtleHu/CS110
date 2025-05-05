@@ -21,7 +21,8 @@ void Board_self_test(void) {
   while (1) {
     LCD_ShowString(60, 25, (u8 *)"TEST (25s)", WHITE);
     if (Get_Button(JOY_LEFT)) {
-      LCD_ShowString(5, 25, (u8 *)"L", RED);
+      LCD_ShowString(5, 25, (u8 *)"L", BLUE);
+      LCD_ShowString(60, 25, (u8 *)"TEST", RED);
     }
     if (Get_Button(JOY_DOWN)) {
       LCD_ShowString(25, 45, (u8 *)"D", BLUE);

@@ -2,10 +2,10 @@
 .globl draw
 .type draw, @function
 draw:
-	li a0,10
-	li a1,27
+	li a0,50
+	li a1,20
 	li a2,150
-	li a3,40
+	li a3,60
 	li a4,62345
 	addi sp,sp,-4
 	sw ra,0(sp)
