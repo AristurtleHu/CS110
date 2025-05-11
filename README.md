@@ -18,7 +18,12 @@ Implement the MD5 cryptographic hash algorithm using the RISC-V instruction set 
 ###  Single-Cycle CPU of RISC-V
 [code](https://github.com/AristurtleHu/Single-Cycle_CPU_of_RISC-V)
 
-Implement a  single-cycle CPU which can process basic instructions of RISC-V
+Implement a single-cycle CPU which can process basic instructions of RISC-V
+
+### 5-Stage Pipelined Toy CPU
+[code](https://github.com/AristurtleHu/5-Stage-Pipelined-Toy-CPU)
+
+Implement a 5-stage pipelined CPU which can process all the instructions from Project 2.1 (solving Structural, Data and Control Hazards)
 
 ## HW
 
