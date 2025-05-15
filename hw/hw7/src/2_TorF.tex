@@ -1,0 +1,13 @@
+\begin{parts}
+\part  (\hspace{2em}) The virtual memory system, via page table-based address translation mechanisms, enables multiple processes to securely share identical physical memory regions (e.g., shared code libraries) while maintaining isolation.
+
+\part  (\hspace{2em}) A page-table walker (PTW) handles and resolves page faults by loading missing pages into memory.
+
+\part  (\hspace{2em}) The size of the virtual address space accessible to the program cannot be larger than
+ the size of the physical address space.
+ 
+\part  (\hspace{2em}) Multi-level page tables optimize memory usage by storing complete physical addresses at the leaf level, enabling direct memory access without translation overhead.
+
+\part  (\hspace{2em}) When a page fault occurs, the operating system must evict a resident page before loading the requested page into memory.
+
+\end{parts}

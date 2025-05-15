@@ -1,0 +1,95 @@
+
+The system uses a 32-bit virtual address space with byte-addressable memory and 30-bit physical addresses, employing a single-level page table with 4KB pages and a 4-way set-associative TLB (total 16 entries, LRU replacement policy).
+\vspace{0.5cm} 
+\begin{parts}
+    \part[8] Answer the following questions. Specify bit ranges as [high:low] with zero-based indexing (bit 0 = LSB). [8 points]
+    \vspace{0.5cm} 
+    
+    The range of bits for the VPN (virtual page number) \blank[3cm]{}.
+    \vspace{0.5cm} 
+    
+    The range of bits for the offset within a page \blank[3cm]{}.
+    \vspace{0.5cm} 
+    
+    The range of bits for the TLB tag \blank[3cm]{}.
+    \vspace{0.5cm} 
+    
+    The range of bits for the TLB set number \blank[3cm]{}.
+    \vspace{0.5cm} 
+    
+    \part [4] Assume the TLB is initially empty, and the accessed VPNs are $\mathtt{4, 17, 20, 8, 21, 5, 17, 25, 29}$ in sequence.  Complete Final TLB State (Table ~\ref{tab:tlb_state_1}). [4 points]
+
+    \begin{table}[h]
+        \centering
+        \caption{Final TLB State}
+        \label{tab:tlb_state_1}
+        \renewcommand{\arraystretch}{1.5} 
+        \begin{tabular}{|c|p{5cm}|} % Vertical lines added with | symbols
+        \hline % 
+        \multicolumn{1}{|c|}{\textbf{Index}} & \multicolumn{1}{c|}{\textbf{VPN}} \\ 
+        \hline
+        0 & \\ \hline
+        1 & \\ \hline
+        2 & \\ \hline
+        3 & \\ \hline
+        \end{tabular}
+    \end{table}
+    
+    \part [12] Based on part (b), subsequent accesses to VPNs are $\mathtt{12, 24, 21, 5, 4, 8, 17, 12, 29}$. [12 points]
+
+    \begin{itemize}
+        \item For Table~\ref{tab:TLB_access_sequence}:
+        \begin{itemize}
+        \item Mark TLB-hit VPNs with $\checkmark$
+        \item Mark VPNs that \textbf{evict others} with $\bigcirc$
+        \item Mark VPNs that \textbf{are evicted} with $\times$
+        \item \textbf{Annotation applies only to the current access and its causally related predecessor.}
+        \end{itemize}
+        \item Complete Final TLB State (Table~\ref{tab:tlb_state_2})
+    \end{itemize}
+    
+    \begin{table}[ht]
+    \begin{minipage}{\textwidth} 
+        \centering
+        \caption{Access Sequence Change}
+        \label{tab:TLB_access_sequence}
+        \setlength{\tabcolsep}{15pt}
+        \renewcommand{\arraystretch}{1.5} 
+        \begin{tabular}{|c|c||c|c||c|c|}
+            \hline
+            \textbf{VPN} & \textbf{Marks} & \textbf{VPN} & \textbf{Marks} &\textbf{VPN} & \textbf{Marks}  \\
+            \hline
+                4 &  & 17 &   & 5 &    \\
+                \hline
+                17 &  & 25 &  & 4 &   \\
+                \hline
+                20 &  & 29 &  & 8 &   \\
+                \hline
+                8 &  & 12 &  & 17 &   \\
+                \hline
+                21 &  & 24 &  & 12 &   \\
+                \hline
+                5 &  & 21 &  & 29 &   \\
+            \hline
+        \end{tabular}
+    \end{minipage}
+    \end{table}
+    
+     \begin{table}[ht]
+        \centering
+        \caption{Final TLB State}
+        \label{tab:tlb_state_2}
+        \renewcommand{\arraystretch}{1.5} 
+        \begin{tabular}{|c|p{5cm}|} % Vertical lines added with | symbols
+        \hline % 
+        \multicolumn{1}{|c|}{\textbf{Index}} & \multicolumn{1}{c|}{\textbf{VPN}} \\ 
+        \hline
+        0 & \\ \hline
+        1 & \\ \hline
+        2 & \\ \hline
+        3 & \\ \hline
+        \end{tabular}
+    \end{table}
+
+
+\end{parts}

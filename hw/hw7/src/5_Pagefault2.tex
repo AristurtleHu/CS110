@@ -1,0 +1,33 @@
+
+The system implements a single-level page table for 32-bit virtual addresses in byte-addressable memory, using 4KB pages with 32-bit page table entries (PTEs) that reserve 8 bits for protection and valid flags. Given the program segment:
+ {\bf   \begin{lstlisting}[label={lst:4_C_src}]
+int w[24][64];
+...
+for ( i=0; i<24; i++ )
+    for ( j=0; j<64; j++ ) w[i][j]=10;
+
+    \end{lstlisting}}
+Assume the array w[24][64] (row-major order, starting at $\mathtt{0x392E00}$, 4-byte integers) is initially not present in main memory, with no page replacement during execution. 
+    \begin{parts}
+        \part[12] After execution: [12 points]
+    \begin{itemize}
+        \vspace{0.5cm}
+        \item The array spans \blank[3cm]{} pages in the virtual address space.
+        \vspace{0.5cm}
+        \item The number of page faults triggered is \blank[3cm]{}.
+        \vspace{0.5cm}
+        \item Fault addresses (page base address): \blank[7cm]{}.
+    \end{itemize}
+    
+    \part[8] If the page size is 128 bytes, and the array is stored in column-major order, after execution: [8 points]
+    \begin{itemize}
+    \vspace{0.5cm}
+    \item The number of page faults triggered is\blank[3cm]{}.
+    \vspace{0.5cm}
+    \end{itemize}
+    \vspace{0.5cm}
+    
+    \part[8] Assume page size is 16KB with two-level page table. What is the maximum size of the physical memory that can be supported by this computer? [8 points]
+
+
+\end{parts}

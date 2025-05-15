@@ -1,0 +1,145 @@
+\documentclass[addpoints, 12pt, answers]{exam}
+%\documentclass[addpoints, 12pt]{exam}
+
+\usepackage{pdfpages}
+\usepackage{epstopdf}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage[ruled,boxed,algo2e]{algorithm2e}
+\usepackage{algorithm}
+\usepackage{pifont}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{amsmath,amscd}
+\usepackage{amssymb,array}
+\usepackage{amsfonts,latexsym}
+\usepackage{graphicx,subfig,wrapfig}
+\usepackage{times}
+\usepackage{psfrag,epsfig}
+\usepackage{verbatim}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{graphics}
+\usepackage{caption}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{ulem}
+\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks=false,bookmarks=false]{hyperref}
+\usepackage{multicol}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{subcaption}
+\usepackage{xcolor}
+
+\usetikzlibrary{automata,positioning}
+\usetikzlibrary{arrows.meta}
+
+\DeclareMathOperator*{\rank}{rank}
+\DeclareMathOperator*{\trace}{trace}
+\DeclareMathOperator*{\acos}{acos}
+\DeclareMathOperator*{\argmax}{argmax}
+
+\renewcommand{\mathbf}{\boldsymbol}
+\newcommand{\answerspace}[1]{\vspace{1em}\makebox[\linewidth]{#1\enspace\hrulefill}}
+\newcommand{\tlbgap}{\hspace{2em}}
+\newcommand{\blank}[1][2cm]{\underline{\hspace{#1}}}
+\newcommand{\answer}[1]{\textcolor{red}{#1}}
+
+\lstset{frame=none,
+    language=c,
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspaces=false,
+    columns=flexible,
+    basicstyle={\small\ttfamily},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue},
+    commentstyle=\color{dkgreen},
+    stringstyle=\color{mauve},
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=8
+}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+
+
+
+\pagestyle{headandfoot}
+\runningheadrule
+\firstpageheader{Computer Architecture I}{}{2025}
+\runningheader{CA I}
+{HW7, Page \thepage\ of \numpages}
+{2025}
+\firstpagefooter{}{}{}
+\runningfooter{}{}{}
+
+\boxedpoints
+
+\pointsinmargin
+% \marginpointname{\%}
+
+
+
+\setlength\answerlinelength{.95\linewidth}
+
+% ADD
+\lstdefinestyle{C} {
+    language = c,
+    commentstyle = \color{olive},
+    keywordstyle = \color{Blue},
+    stringstyle = \color{olive}
+}
+
+% ADD
+\lstdefinestyle{S} {
+    language = s,
+    commentstyle = \color{olive},
+    keywordstyle = ,
+    stringstyle = \color{olive}
+}
+
+
+\begin{document}
+    \begin{center}
+
+    {\centering \Large Homework 7\\\vspace{.75cm}}
+
+        \vspace{0.1cm}
+        \makebox[\textwidth]{Chinese Name:\enspace\hrulefill}\\[0.6cm]
+        \makebox[\textwidth]{Pinyin Name:\enspace\hrulefill}\\[0.6cm]
+        \makebox[\textwidth]{Student ID:\enspace\hrulefill}\\[0.6cm]
+        \makebox[\textwidth]{E-Mail prefix:\enspace\hrulefill}\\[0.5cm]
+
+    \end{center}
+    
+    \begin{questions}
+        \question[10] \textbf{Put T (True) or F (False) for each of following statement. [2 points each]}
+        \input{src/2_TorF}
+        \newpage
+        \question[24] \textbf{TLB [24 points]}
+        \input{src/3_TLB}
+        \clearpage
+        \question[12] \textbf{Multi-level Page Tables [12 points]}
+        \input{src/4_three_level}
+        \newpage
+         \question[28] \textbf{Page Faults [28 points]}
+        \input{src/5_Pagefault2}
+        \newpage
+        \question[26] \textbf{Page Table Walk [26 points]}
+        \input{src/6_Pagefault}
+       \newpage
+
+    \end{questions}
+\end{document}
