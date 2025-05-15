@@ -84,3 +84,11 @@ Run by `make && ./main <assembly code to run> 2>main.log`
   - Track total memory accesses, instruction cache hits, data cache hits, and total cache misses.
   - Simulate cache behavior for instruction fetches and `lw`/`sw` data accesses.
   - Print the final counts for total memory accesses, instruction hits, data hits, and total misses.
+
+### HW7
+
+Questions about:
+- TLB
+- Multi-level Page Tables 
+- Page Faults
+- Page Table Walk
