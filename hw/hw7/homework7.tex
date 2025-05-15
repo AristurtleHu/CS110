@@ -19,7 +19,7 @@
 \usepackage{amsmath,amscd}
 \usepackage{amssymb,array}
 \usepackage{amsfonts,latexsym}
-\usepackage{graphicx,subfig,wrapfig}
+\usepackage{graphicx,wrapfig}
 \usepackage{times}
 \usepackage{psfrag,epsfig}
 \usepackage{verbatim}
@@ -37,6 +37,7 @@
 \usepackage{array}
 \usepackage{subcaption}
 \usepackage{xcolor}
+\usepackage{CJK}
 
 \usetikzlibrary{automata,positioning}
 \usetikzlibrary{arrows.meta}
@@ -110,36 +111,37 @@
     stringstyle = \color{olive}
 }
 
-
 \begin{document}
+\begin{CJK*}{UTF8}{gbsn}
     \begin{center}
 
-    {\centering \Large Homework 7\\\vspace{.75cm}}
+        {\centering \Large Homework 7\\\vspace{.75cm}}
 
         \vspace{0.1cm}
-        \makebox[\textwidth]{Chinese Name:\enspace\hrulefill}\\[0.6cm]
-        \makebox[\textwidth]{Pinyin Name:\enspace\hrulefill}\\[0.6cm]
-        \makebox[\textwidth]{Student ID:\enspace\hrulefill}\\[0.6cm]
-        \makebox[\textwidth]{E-Mail prefix:\enspace\hrulefill}\\[0.5cm]
+        \makebox[\textwidth]{Chinese Name:\enspace \underline{杨人一}}\\[0.6cm]
+        \makebox[\textwidth]{Pinyin Name:\enspace \underline{Yang Renyi}}\\[0.6cm]
+        \makebox[\textwidth]{Student ID: \enspace \underline{2023533030}}\\[0.6cm]
+        \makebox[\textwidth]{E-Mail prefix:\enspace \underline{yangry2023}}\\[0.5cm]
 
     \end{center}
-    
-    \begin{questions}
-        \question[10] \textbf{Put T (True) or F (False) for each of following statement. [2 points each]}
-        \input{src/2_TorF}
-        \newpage
-        \question[24] \textbf{TLB [24 points]}
-        \input{src/3_TLB}
-        \clearpage
-        \question[12] \textbf{Multi-level Page Tables [12 points]}
-        \input{src/4_three_level}
-        \newpage
-         \question[28] \textbf{Page Faults [28 points]}
-        \input{src/5_Pagefault2}
-        \newpage
-        \question[26] \textbf{Page Table Walk [26 points]}
-        \input{src/6_Pagefault}
-       \newpage
+\end{CJK*}
 
-    \end{questions}
+\begin{questions}
+    \question[10] \textbf{Put T (True) or F (False) for each of following statement. [2 points each]}
+    \input{src/2_TorF}
+    \newpage
+    \question[24] \textbf{TLB [24 points]}
+    \input{src/3_TLB}
+    \clearpage
+    \question[12] \textbf{Multi-level Page Tables [12 points]}
+    \input{src/4_three_level}
+    \newpage
+    \question[28] \textbf{Page Faults [28 points]}
+    \input{src/5_Pagefault2}
+    \newpage
+    \question[26] \textbf{Page Table Walk [26 points]}
+    \input{src/6_Pagefault}
+    \newpage
+
+\end{questions}
 \end{document}
