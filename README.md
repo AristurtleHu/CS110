@@ -25,6 +25,11 @@ Implement a single-cycle CPU which can process basic instructions of RISC-V
 
 Implement a 5-stage pipelined CPU which can process all the instructions from Project 2.1 (solving Structural, Data and Control Hazards)
 
+### Encrypt and Hash
+[code](https://github.com/AristurtleHu/Encrypt-and-Hash)
+
+Use all knowledge about computer architecture to optimize a program with encryption and hashing. Modify the code to improve its time performance. (Cache Blocking, SIMD, Loop Unrolling, Multithreading) 
+
 ## HW
 
 ### HW2
