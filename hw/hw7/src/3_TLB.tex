@@ -43,7 +43,7 @@ The system uses a 32-bit virtual address space with byte-addressable memory and 
         \item Mark TLB-hit VPNs with $\checkmark$
         \item Mark VPNs that \textbf{evict others} with $\bigcirc$
         \item Mark VPNs that \textbf{are evicted} with $\times$
-        \item \textbf{Annotation applies only to the current access and its causally related predecessor.}
+       \item \textbf{If a newly annotated element has causal relationship with an existing element, both should be marked (e.g., when element A replaces element B, then A is marked with $\bigcirc$ and B is marked with $\times$). Otherwise, only the current access is annotated.}
         \end{itemize}
         \item Complete Final TLB State (Table~\ref{tab:tlb_state_2})
     \end{itemize}

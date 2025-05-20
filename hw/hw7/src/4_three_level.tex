@@ -15,7 +15,7 @@ The system employs a 48-bit virtual address space with byte-addressable memory, 
     \part[4] Calculate the total size of all second-level page tables. [4 points]
     \vspace{5cm} 
     
-    \part[4] Consider an x86-64 system with 64-bit virtual addressing (48-bit usable), 4KB page tables, and 8-byte PTEs, supporting both 4KB pages (4-level: PML4$\to$PDPT$\to$PD$\to$PT) and 2MB huge pages (3-level, no PT). When using 2MB huge pages for application data, how is the virtual address partitioned? Specify bit allocations for PML4, PDPT, PD indices and page offset. [4 points]
+    \part[4] Consider an x86-64 system with 64-bit virtual addressing (48-bit usable), 4KB page tables, and 8-byte PTEs, supporting both 4KB pages (4-level: PML4$\to$PDPT$\to$PD$\to$PT) and 2MB huge pages (3-level, no PT). When using 2MB huge pages for application data, how is the virtual address partitioned?  \textbf{Specify bit allocations for PML4, PDPT, PD indices and page offset as [high:low] ranges using zero-based indexing}. [4 points]
 
 
 \end{parts}

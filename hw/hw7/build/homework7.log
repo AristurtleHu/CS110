@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.12.8)  15 MAY 2025 23:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.12.8)  20 MAY 2025 14:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/mnt/c/users/yry16/onedrive/stu/cs/CS110/hw/hw7/homework7.tex
-(/mnt/c/users/yry16/onedrive/stu/cs/CS110/hw/hw7/homework7.tex
+**/mnt/c/Users/yry16/OneDrive/STU/CS/CS110/hw/hw7/homework7.tex
+(/mnt/c/Users/yry16/OneDrive/STU/CS/CS110/hw/hw7/homework7.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/exam/exam.cls
 Document Class: exam 2021/02/26 Version 2.7 by Philip Hirschhorn
@@ -1247,13 +1247,13 @@ AED: lastpage setting LastPage
 Here is how much of TeX's memory you used:
  44913 strings out of 478287
  989412 string characters out of 5849289
- 1713338 words of memory out of 5000000
+ 1713345 words of memory out of 5000000
  62396 multiletter control sequences out of 15000+600000
  484045 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,10n,91p,509b,1427s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,10n,91p,568b,1427s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu4e.pfb></usr/share/texmf/fonts/type1/arphic/gbsnu/gbsnu67.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on build/homework7.pdf (7 pages, 114033 bytes).
+Output written on build/homework7.pdf (7 pages, 114325 bytes).
 PDF statistics:
  133 PDF objects out of 1000 (max. 8388607)
  104 compressed objects within 2 object streams
