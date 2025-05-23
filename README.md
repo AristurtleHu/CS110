@@ -97,3 +97,15 @@ Questions about:
 - Multi-level Page Tables 
 - Page Faults
 - Page Table Walk
+
+### HW8
+
+Questions about:
+
+- Basic Concepts
+- Number Representation
+- Logic
+- FSM
+- C, Risc-V and Cache
+- Pipeline
+- AMAT and Performance
