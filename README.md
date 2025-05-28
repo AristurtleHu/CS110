@@ -30,6 +30,11 @@ Implement a 5-stage pipelined CPU which can process all the instructions from Pr
 
 Use all knowledge about computer architecture to optimize a program with encryption and hashing. Modify the code to improve its time performance. (Cache Blocking, SIMD, Loop Unrolling, Multithreading) 
 
+### Shooting Game
+[code](https://github.com/AristurtleHu/Shooting-Game)
+
+Use C language and RISC-V assembly to implement a STG (Shooting Game). Also use PlatformIO to cross-compile and generate a program for the Longan Nano development board.
+
 ## HW
 
 ### HW2
