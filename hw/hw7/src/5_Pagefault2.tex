@@ -12,23 +12,23 @@ Assume the array w[24][64] (row-major order, starting at $\mathtt{0x392E00}$, 4-
     \part[12] After execution: [12 points]
     \begin{itemize}
         \vspace{0.5cm}
-        \item The array spans \blank[3cm]{2} pages in the virtual address space.
+        \item The array spans \blank[3cm]{3} pages in the virtual address space.
               \vspace{0.5cm}
-        \item The number of page faults triggered is \blank[3cm]{2}.
+        \item The number of page faults triggered is \blank[3cm]{3}.
               \vspace{0.5cm}
-        \item Fault addresses (page base address): \blank[7cm]{0x392E00, 0x3D2E00}.
+        \item Fault addresses (page base address): \blank[7cm]{0x392000, 0x39300, 0x394000}.
     \end{itemize}
 
     \part[8] If the page size is 128 bytes, and the array is stored in column-major order, after execution: [8 points]
     \begin{itemize}
         \vspace{0.5cm}
-        \item The number of page faults triggered is \blank[3cm]{64}.
+        \item The number of page faults triggered is \blank[3cm]{49}.
               \vspace{0.5cm}
     \end{itemize}
     \vspace{0.5cm}
 
     \part[8] Assume page size is 16KB with two-level page table. What is the maximum size of the physical memory that can be supported by this computer? [8 points]
 
-    The offset is 14 bits, and the page table entry (PTE) is 32 bits. The maximum number of pages is $2^{32-14} = 2^{18}$, and each PTE can map to a physical frame of size $2^{14}$ bytes. Therefore, the maximum physical memory size is: $$2^{18} \times 2^{14} = 2^{32} \text{ bytes} = 4 \text{ GB}.$$
+    The page table entry (PTE) is 32 bits. The maximum number of PPN is $2^{32-8} = 2^{24}$, and each PTE can map to a physical frame of size $2^{14}$ bytes. Therefore, the maximum physical memory size is: $$2^{24} \times 2^{14} = 2^{38} \text{ bytes} = 256 \text{ GB}.$$
 
 \end{parts}

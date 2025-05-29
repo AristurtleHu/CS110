@@ -89,19 +89,19 @@ Assume:
 
     \vspace{\medskipamount}
 
-    First, in the Level 1 page table, the corresponding entry is $PA = \blank{0x0C}$, $Cont. = \blank{0x300}$. Thus, the Level 2 page table base address is \blank{0x300}.
+    First, in the Level 1 page table, the corresponding entry is $PA = \blank{0x0C}$, $Cont. = \blank{0x30}$. Thus, the Level 2 page table base address is \blank{0x30}.
 
     \vspace{\smallskipamount}
 
-    Next, in the Level 2 page table, the corresponding entry is $PA = \blank{0x300}$, $Cont. = \blank{0x900}$. Thus, the Level 3 page table base address is \blank{0x900}.
+    Next, in the Level 2 page table, the corresponding entry is $PA = \blank{0x30}$, $Cont. = \blank{0x90}$. Thus, the Level 3 page table base address is \blank{0x90}.
 
     \vspace{\smallskipamount}
 
-    Finally, in the Level 3 page table, the corresponding entry is $PA = \blank{0x902}$, $Cont. = \blank{0x1200}$. Thus, the target page frame base address is \blank{0x1200}.
+    Finally, in the Level 3 page table, the corresponding entry is $PA = \blank{0x98}$, $Cont. = \blank{0x120}$. Thus, the target page frame base address is \blank{0x120}.
 
     \vspace{\medskipamount}
 
-    Combining the page frame base address with the Page Offset, the final physical address is \blank{0x1204}, resulting in a Page \blank{Miss} (Hit/Miss).
+    Combining the page frame base address with the Page Offset, the final physical address is \blank{0x124}, resulting in a Page \blank{Miss} (Hit/Miss).
 
     \vspace{1cm}
     \part[4] Calculating the size of the increase in the physical memory occupied by process A during the given sequence of virtual address accesses (counting only process-exclusive physical pages, excluding shared pages, kernel structures, and other unrelated components). [4 points]
