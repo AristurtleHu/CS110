@@ -96,7 +96,7 @@
 \pagestyle{headandfoot}
 \runningheadrule
 \firstpageheader{Computer Architecture I}{}{2025}
-\runningheader{Email:}
+\runningheader{Email: yangry2023}
 {Homework 8, Page \thepage\ of \numpages}
 {Computer Architecture I 2025}
 \firstpagefooter{}{}{}
@@ -129,25 +129,25 @@
     \question[20] \textbf{Put T (True) or F (False) for each of following statement. [2 points each]}
 
     \begin{enumerate}[(1)]
-        \item ( \quad ) On-chip cache has bigger capacity compared with the main memory because they are physically closer to the CPU.
+        \item ( F ) On-chip cache has bigger capacity compared with the main memory because they are physically closer to the CPU.
 
-        \item ( \quad ) In a Moore FSM,the output depends only on the current state; in a Mealy FSM, the output depends on both the current state and the inputs.
+        \item ( T ) In a Moore FSM,the output depends only on the current state; in a Mealy FSM, the output depends on both the current state and the inputs.
 
-        \item ( \quad ) Assign the base address of array X to register t0. The instruction lw a0,4(t0) will always load X[1] into a0.
+        \item ( F ) Assign the base address of array X to register t0. The instruction lw a0,4(t0) will always load X[1] into a0.
 
-        \item ( \quad ) Register a0-a7 can not be changed during execution of a function.
+        \item ( F ) Register a0-a7 can not be changed during execution of a function.
 
-        \item ( \quad ) Pseudo instructions could be output by the compiler.
+        \item ( T ) Pseudo instructions could be output by the compiler.
 
-        \item ( \quad ) The linker finalizes destination addresses for all jump instruction.
+        \item ( T ) The linker finalizes destination addresses for all jump instruction.
 
-        \item ( \quad ) Spatial locality refers to the phenomenon where accessing a specific memory location makes accessing proximate storage positions more likely in the near future.
+        \item ( T ) Spatial locality refers to the phenomenon where accessing a specific memory location makes accessing proximate storage positions more likely in the near future.
 
-        \item ( \quad ) Assume that a processor has a two-level cache hierarchy. If L1 cache follows the write-through policy while the L2 cache follows the write-back policy, a write hit at L1 cache would always cause a write at L2 cache.
+        \item ( T ) Assume that a processor has a two-level cache hierarchy. If L1 cache follows the write-through policy while the L2 cache follows the write-back policy, a write hit at L1 cache would always cause a write at L2 cache.
 
-        \item ( \quad ) Instruction-level parallelism (ILP) techniques include Very Long Instruction Word (VLIW) and Single Instruction, Multiple Data (SIMD).
+        \item ( F ) Instruction-level parallelism (ILP) techniques include Very Long Instruction Word (VLIW) and Single Instruction, Multiple Data (SIMD).
 
-        \item ( \quad ) A page fault occurs if a page table entry can not be found in the TLB.
+        \item ( F ) A page fault occurs if a page table entry can not be found in the TLB.
 
     \end{enumerate}
 
@@ -166,29 +166,28 @@
             \end{minipage}
             \hfill
             \begin{minipage}[t]{0.35\textwidth}
-                \includegraphics[width=\linewidth]{number.pdf}
+                \includegraphics[width=\linewidth]{assets/number_sign.png}
                 \caption*{Sign Magnitude}
             \end{minipage}
             \hfill
             \begin{minipage}[t]{0.35\textwidth}
-                \includegraphics[width=\linewidth]{number.pdf}
+                \includegraphics[width=\linewidth]{assets/number_one.png}
                 \caption*{One's complement}
             \end{minipage}
             \hfill
             \begin{minipage}[t]{0.35\textwidth}
-                \includegraphics[width=\linewidth]{number.pdf}
+                \includegraphics[width=\linewidth]{assets/number_two.png}
                 \caption*{Two's complement}
             \end{minipage}
         \end{figure}
 
         \part[3] What is the smallest number greater than 2 that can be represented by the IEEE 754 single-precision floating-point format?
-        \\
-        \\
-        \\
+
+        Answer: $2 + 2^{-23 + 1} = 2 + 2^{-22} = 2.0000002384185791015625$
+
         \part[3] What is the smallest number greater than 4 that can be represented by the IEEE 754 single-precision floating-point format?
-        \\
-        \\
-        \\
+
+        Answer: $4 + 2^{-23 + 2} = 4 + 2^{-21} = 4.000000476837158203125$
 
     \end{parts}
 
@@ -199,7 +198,7 @@
     \question \textbf{Logic [8 points]}\\
     \begin{parts}
         \part[4] \textbf{(Multiple Choice)} Which of the following statement(s) is(are) true about boolean algebra?
-        \underline{\quad\quad\quad\quad\quad\quad}
+        \underline{ABCD}
         \begin{enumerate}[A.]
             \item $XYZ+XY+X=X$.
             \item $(X+\overline{Y})X=X+X\overline{Y}$.
@@ -209,7 +208,7 @@
 
 
         \part[4] \textbf{(Multiple Choice)} Which of the following statement(s) is(are) true about boolean algebra?
-        \underline{\quad\quad\quad\quad\quad\quad}
+        \underline{ABCD}
         \begin{enumerate}[A.]
             \item $X+\overline{X}Y=X+Y$.
             \item $X\overline{Y}Z+\overline{X}+Y+\overline{Z}=1$.
@@ -233,19 +232,19 @@
             \centering
             \begin{tabular}{|c|c|c|c|c|c|}
                 \hline
-                state bit 1 & state bit 0 & input & next state bit 1 & next state bit 0 & ouput \\
+                state bit 1 & state bit 0 & input & next state bit 1 & next state bit 0 & output \\
                 \hline
-                0           & 0           & 0     &                  &                  &       \\
+                0           & 0           & 0     & 0                & 0                & 0      \\
                 \hline
-                0           & 0           & 1     &                  &                  &       \\
+                0           & 0           & 1     & 0                & 1                & 0      \\
                 \hline
-                0           & 1           & 0     &                  &                  &       \\
+                0           & 1           & 0     & 0                & 0                & 0      \\
                 \hline
-                0           & 1           & 1     &                  &                  &       \\
+                0           & 1           & 1     & 1                & 0                & 1      \\
                 \hline
-                1           & 0           & 0     &                  &                  &       \\
+                1           & 0           & 0     & 0                & 0                & 0      \\
                 \hline
-                1           & 0           & 1     &                  &                  &       \\
+                1           & 0           & 1     & 1                & 0                & 1      \\
                 \hline
             \end{tabular}
             \label{tab:my_label}
@@ -254,7 +253,7 @@
         \part[3] Using St1(state bit 1), St0(state bit 0) and Ip(Input) as the input and Output as the output, extract a boolean expression from the truth table
         \newline
 
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}
+        \underline{Output = Ip (St1 + St0)}
 
     \end{parts}
     \pagebreak
@@ -288,14 +287,14 @@ loop:
 \end{lstlisting}}
 
 
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
+        \underline{slli t0, x14, 3}\\
+        \underline{add t1, t0, x12}\\
+        \underline{lw t2, 0(t1)}\\
+        \underline{lw t3, 1(t1)}\\
+        \underline{lw t4, 2(t1)}\\
+        \underline{mul t5, t2, t3}\\
+        \underline{add t6, t5, t4}\\
+        \underline{sw t6, 4(t1)}\\
         \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
         \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
         \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
@@ -325,7 +324,7 @@ end:
                     \cline{2-2}
                     \raisebox{2ex}[0pt][0pt]{0xFFFFFFFF}  & {\bf... ...} \\ \cline{2-2}
                                                           & 0x00000C88   \\ \cline{2-2}
-                                                          & 0x0000CC08   \\ \cline{2-2}
+                                                          & 0x00000000   \\ \cline{2-2}
                                                           & 0x0000CC00   \\ \cline{2-2}
                     \raisebox{2ex}[0pt][0pt]{0x00FF0000}  & {\bf... ...} \\ \cline{2-2}
                                                           &              \\ \cline{2-2}
@@ -346,7 +345,7 @@ end:
                     \cline{2-2}
                     \raisebox{2ex}[0pt][0pt]{0xFFFFFFFF}  & {\bf... ...} \\ \cline{2-2}
                                                           & 0x00000C88   \\ \cline{2-2}
-                                                          & 0x0000CC08   \\ \cline{2-2}
+                                                          & 0xCC000000   \\ \cline{2-2}
                                                           & 0x0000CC00   \\ \cline{2-2}
                     \raisebox{2ex}[0pt][0pt]{0x00FF0000}  & {\bf... ...} \\ \cline{2-2}
                                                           &              \\ \cline{2-2}
@@ -370,17 +369,17 @@ end:
         Suppose we now have a data cache with a size of 256 Bytes and a cache block of 8 Bytes that is direct mapped. what is the hit rate of the data cache?
 
 
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}
+        \underline{$\frac{7}{8}$}
 
         Suppose we now have a data cache with a size of 256 Bytes and a cache block of 8 Bytes that is 2-ways associative. what is the hit rate of the data cache?
 
 
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}
+        \underline{$\frac{7}{8}$}
 
 
         Suppose we now have a data cache with a size of 256 Bytes and a cache block of 16 Bytes that is 4-ways associative. what is the hit rate of the data cache?
 
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}
+        \underline{$\frac{11}{12}$}
 
 
 
@@ -415,22 +414,23 @@ end:
 
     \begin{parts}
         \part[4] What is the highest clock frequency for this processor? Show calculation details.
-        \\
-        \\
-        \\
-        \\
-        \\
-        \\
+        The longest delay of the five stages is Memory read:
+        \[
+            t_{max} = t_{clk-to-q} + t_{setup} + t_{memory-read} = 25ps + 25ps + 200ps = 250ps
+        \]
+        \[
+            f_{max} = \frac{1}{t_{clk}} = \frac{1}{250ps} = 4GHz
+        \]
 
         \pagebreak
 
         \part[4]
         If this 5 stage pipelined Risc-V processor is changed to a single-cycle datapath, what is the lowest possible $t_{clk}$? Show calculation details.
-        \\
-        \\
-        \\
-        \\
-        \\
+
+        \begin{align*}
+            t_{clk} & \ge t_{clk-to-q}+ t_{I-memory-read} + t_{regfile-read} + t_{mux} + t_{D-memory-read} + t_{mux} + t_{regfile-setup} \\
+                    & = 25ps + 200ps + 100ps + 25ps + 200ps + 25ps + 20ps =  595ps
+        \end{align*}
 
         \part[4] Forwarding datapaths are added to this five-stage pipelined RISC-V processor (the red line in Figure).
         The given code is excuted on this processor.
@@ -448,24 +448,26 @@ I8:    add  a5, a2, a4
 
         Plese identify which instruction(s) activate the forwarding data path to reduce stall(s)? (Use $I1\rightarrow I3$, etc. to represent the instruction I1 are forward to I3.)
         \newline
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
+        \underline{$I3\rightarrow I5$}\\
+        \underline{$I7\rightarrow I8$}\\
         \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
         \part[3] With the forwarding datapaths, there is still one unavoidable stall left to correctly execute the code above. Please locate the instructions and registers that cause the stall (Use the blanks below, use I1, I2, etc. to represent the instructions).
         \newline
 
-        The register \underline{\quad\quad\quad\quad} in instruction \underline{\quad\quad\quad\quad} and \underline{\quad\quad\quad\quad} causes the unavoidable stall.
+        The register \underline{a7} in instruction \underline{I6} and \underline{I7} causes the unavoidable stall.
 
 
         \part[4] Suppose we have a program with 4000 lines instructions running on this processor. What is the running time of the program ? Suppose we use the processor frequency in (a). And we assume that the CPI is the same as the CPI of the program in (c). Show calculation details.
 
         (Hint $\frac{time}{program}=\frac{instructions}{program}\times\frac{cycles}{instruction}\times\frac{time}{cycle}$)
-        \\
-        \\
-        \\
+
+        \begin{align*}
+            time_{program} & = 4000 \times \frac{9}{8} \times \frac{1}{4GHz}          \\
+                           & = 4000 \times \frac{9}{8} \times \frac{1}{4 \times 10^9} \\
+                           & = 4000 \times \frac{9}{32} \times 10^{-9}                \\
+                           & = 1.125 \times 10^{-6}                                   \\
+                           & = 1.125 \mu s
+        \end{align*}
 
     \end{parts}
 
@@ -475,25 +477,32 @@ I8:    add  a5, a2, a4
 
     \begin{parts}
         \part[4] We have a two-level cache where L1 has a hit rate of $80\%$ and a hit latency of 2 cycles, and L2 has a hit latency of $15$ cycles. Assume $100$ total accesses to this two-level cache will cause {\bf five} L2 misses on average, what is the L2 local miss rate?  Assume access to main memory takes 100 cycles, what is the Average Memory Access Time (AMAT) of this system?
-        \\
-        \\
-        \\
-        \\
-        \\
+        \begin{align*}
+            \text{L2 local miss rate} & = \frac{\text{L2 misses}}{\text{L2 accesses}} = \frac{5}{100 - 80} = \frac{5}{20} = 0.25
+        \end{align*}
+
+        \begin{align*}
+            AMAT & = 2 + 0.2 \times (15 + 0.25 \times 100) \\
+            AMAT & = 10 \quad cycles
+        \end{align*}
 
         \part[4] Now we add a L3 cache to the above two-levels cache. If the hit latency of L3 cache is 30 cycles, what is the maximal local miss rate of L3 cache if we want to reduce the AMAT of the system to $8$ cycles?
-        \\
-        \\
-        \\
-        \\
-        \\
+
+        \begin{align*}
+            AMAT & = 2 + 0.2 \times (15 + 0.25 \times (30 + m \times 100)) \\
+            8    & = 2 + 0.2 \times (22.5 + 25m)                           \\
+            m    & = 0.3
+        \end{align*}
 
         \part[4] Assume that you are given a program, of which a fraction $f$ (measured in percentage) can be optimized for parallel computing by employing N machines built as a cluster. Consider that $f=80\%$
         . If you want to accelerate the program's performance to about 3 times, what is the minimal number of N you need to employ?
-        \\
-        \\
-        \\
 
+        \begin{align*}
+            \text{Speedup} & = \frac{1}{(1-f) + \frac{f}{N}} \\
+            3              & = \frac{1}{0.2 + \frac{0.8}{N}} \\
+            N              & = \frac{0.8}{1/3 - 0.2}         \\
+            N              & =  6
+        \end{align*}
 
     \end{parts}
 
