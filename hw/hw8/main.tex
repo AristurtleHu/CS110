@@ -428,8 +428,8 @@ end:
         If this 5 stage pipelined Risc-V processor is changed to a single-cycle datapath, what is the lowest possible $t_{clk}$? Show calculation details.
 
         \begin{align*}
-            t_{clk} & \ge t_{clk-to-q}+ t_{I-memory-read} + t_{regfile-read} + t_{mux} + t_{D-memory-read} + t_{mux} + t_{regfile-setup} \\
-                    & = 25ps + 200ps + 100ps + 25ps + 200ps + 25ps + 20ps =  595ps
+            t_{clk} & \ge t_{clk-to-q}+ t_{I-memory-read} + t_{regfile-read} + t_{mux} + t_{alu} + t_{D-memory-read} + t_{mux} + t_{regfile-setup} \\
+                    & = 25ps + 200ps + 100ps + 25ps + 150ps + 200ps + 25ps + 20ps =  745ps
         \end{align*}
 
         \part[4] Forwarding datapaths are added to this five-stage pipelined RISC-V processor (the red line in Figure).
