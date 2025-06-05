@@ -12,9 +12,9 @@ struct node {
 int main(void) {
   struct node N[3];
   for (int i = 0; i < 3; i++) {
-    N[i].a = 0x1f;   // int8_t
-    N[i].b = 0xb1;   // uint8_t
-    N[i].c = 0x1595; // short
+    N[i].a = 0xa6;   // int8_t
+    N[i].b = 0x08;   // uint8_t
+    N[i].c = 0xfa1d; // short
     N[i].d = 0;      // int
   }
 

@@ -290,9 +290,9 @@ loop:
         \underline{slli t0, x14, 2}\\
         \underline{add t1, t0, x12}\\
         \underline{lw t2, 0(t1)}\\
-        \underline{lw t3, 0(t2)}\\
-        \underline{lw t4, 1(t2)}\\
-        \underline{lw t5, 2(t2)}\\
+        \underline{lb t3, 0(t2)}\\
+        \underline{lbu t4, 1(t2)}\\
+        \underline{lh t5, 2(t2)}\\
         \underline{mul t4, t3, t4}\\
         \underline{add t6, t5, t4}\\
         \underline{sw t6, 4(t2)}\\
@@ -348,12 +348,12 @@ end:
                                                           & 0x0000CC08   \\ \cline{2-2}
                                                           & 0x0000CC00   \\ \cline{2-2}
                     \raisebox{2ex}[0pt][0pt]{0x00FF0000}  & {\bf... ...} \\ \cline{2-2}
-                                                          & 0x2A1B0000   \\ \cline{2-2}
+                                                          & 0xFFFFF74D   \\ \cline{2-2}
                                                           & 0xA608FA1D   \\ \cline{2-2}
-                                                          & 0xD848FFFF   \\ \cline{2-2}
+                                                          & 0xFFFFF72A   \\ \cline{2-2}
                                                           & 0x94AE4092   \\ \cline{2-2}
                     \raisebox{2ex}[0pt][0pt]{0x0000CC00}  & {\bf... ...} \\ \cline{2-2}
-                                                          & 0x042B0000   \\ \cline{2-2}
+                                                          & 0xFFFFAA84   \\ \cline{2-2}
                     \raisebox{-2ex}[0pt][0pt]{0x00000C88} & 0x1FB19515   \\ \cline{2-2}
                     \raisebox{-2ex}[0pt][0pt]{0x00000000} & {\bf... ...} \\ \cline{2-2}
                 \end{tabular}
@@ -369,12 +369,12 @@ end:
         Suppose we now have a data cache with a size of 256 Bytes and a cache block of 8 Bytes that is direct mapped. what is the hit rate of the data cache?
 
 
-        \underline{$\frac{19}{30}$}
+        \underline{$\frac{2}{3}$}
 
         Suppose we now have a data cache with a size of 256 Bytes and a cache block of 8 Bytes that is 2-ways associative. what is the hit rate of the data cache?
 
 
-        \underline{$\frac{5}{6}$}
+        \underline{$\frac{11}{15}$}
 
 
         Suppose we now have a data cache with a size of 256 Bytes and a cache block of 16 Bytes that is 4-ways associative. what is the hit rate of the data cache?
@@ -414,6 +414,13 @@ end:
 
     \begin{parts}
         \part[4] What is the highest clock frequency for this processor? Show calculation details.
+        \begin{align*}
+            t_{IF}  & = t_{clk-to-q} + t_{setup}+ t_{I-memory-read} = 250ps                 \\
+            t_{ID}  & = t_{clk-to-q} + t_{setup} + max(t_{regfile-read}, t_{imm}) = 150ps   \\
+            t_{EX}  & = t_{clk-to-q} + t_{setup} + t_{mux} + t_{alu} = 225ps                \\
+            t_{MEM} & = t_{clk-to-q} + t_{setup} + max(t_{D-memory-read}, t_{mux})  = 250ps \\
+            t_{WB}  & = t_{clk-to-q} + t_{mux} + t_{regfile-setup} = 70ps
+        \end{align*}
         The longest delay of the five stages is Memory read:
         \[
             t_{max} = t_{clk-to-q} + t_{setup} + t_{memory-read} = 25ps + 25ps + 200ps = 250ps
@@ -448,9 +455,10 @@ I8:    add  a5, a2, a4
 
         Plese identify which instruction(s) activate the forwarding data path to reduce stall(s)? (Use $I1\rightarrow I3$, etc. to represent the instruction I1 are forward to I3.)
         \newline
+        \underline{$I1\rightarrow I3$}\\
         \underline{$I3\rightarrow I5$}\\
+        \underline{$I5\rightarrow I6$}\\
         \underline{$I7\rightarrow I8$}\\
-        \underline{\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad}\\
         \part[3] With the forwarding datapaths, there is still one unavoidable stall left to correctly execute the code above. Please locate the instructions and registers that cause the stall (Use the blanks below, use I1, I2, etc. to represent the instructions).
         \newline
 
